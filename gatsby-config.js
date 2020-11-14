@@ -1,6 +1,6 @@
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = `https://letmeseemysite.com`,
+  URL: NETLIFY_SITE_URL = `https://junkcarsmass.com`,
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env;
@@ -11,7 +11,7 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     title: `Angels Towing - Junk Car Mass`,
-    description: `Angels Towing - Junk Car Mass`,
+    description: `Angels Towing - Junk Car Mass will pay the highest amount of CASH for your junk car. We buy any vehicle make, model, and condition. Call (617) 997-6510 for your quote!`,
     author: `Flaviano Angel`,
     image: `https://junkcarsmass.com#image`,
     siteUrl,
@@ -27,14 +27,14 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-force-trailing-slashes`,
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: 'gatsby-plugin-google-tagmanager',
-    //   options: {
-    //     id: 'GTM-W8D3WTB',
-    //     includeInDevelopment: false,
-    //     defaultDataLayer: { platform: 'gatsby' },
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-T37DHXJ',
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: 'gatsby' },
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -67,7 +67,7 @@ module.exports = {
           production: {
             policy: [
               // REMOVE DISALLOW WHEN GOING LIVE
-              { userAgent: '*', disallow: ['/'] },
+              { userAgent: '*' },
             ],
           },
           'branch-deploy': {

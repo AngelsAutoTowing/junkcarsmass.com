@@ -75,9 +75,6 @@ function SEO({
       }}
       title={title}
     >
-      {/* REMOVE WHEN GOING LIVE */}
-      <meta name="robots" content="noindex"></meta>
-
       <link rel="canonical" href={canonicalLink} />
 
       <meta name="description" content={metaDescription} />
