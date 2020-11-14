@@ -41,8 +41,8 @@ function SEO({
         "sameAs": [
           "https://www.facebook.com/ANGELSAUTOANDTOWING"
         ],
-        "logo": "https://junkcarsmass.com/#imagelogo",
-        "image": "https://junkcarsmass.com/#imagebusiness",
+        "logo": "https://junkcarsmass.com/static/49c35b065dcdb5415dab96d7c754f4f3/2dc9a/angels-towing-junk-car-mass-cash-for-junk-cars-logo.png",
+        "image": "https://junkcarsmass.com/static/b571410c8645d15841ec7d624e56045b/c01ea/tow-truck-angels-towing-junk-car-mass-boston-massachusetts.webp",
         "description": "Angels Towing - Junk Car Mass will pay the highest amount of CASH for your junk car. We buy any vehicle make, model, and condition. Call (617) 997-6510 for your quote!",
         "address": {
           "@type": "PostalAddress",

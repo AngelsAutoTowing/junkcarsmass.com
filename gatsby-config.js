@@ -13,7 +13,7 @@ module.exports = {
     title: `Angels Towing - Junk Car Mass`,
     description: `Angels Towing - Junk Car Mass will pay the highest amount of CASH for your junk car. We buy any vehicle make, model, and condition. Call (617) 997-6510 for your quote!`,
     author: `Flaviano Angel`,
-    image: `https://junkcarsmass.com#image`,
+    image: `https://junkcarsmass.com/static/49c35b065dcdb5415dab96d7c754f4f3/2dc9a/angels-towing-junk-car-mass-cash-for-junk-cars-logo.png`,
     siteUrl,
   },
   plugins: [
