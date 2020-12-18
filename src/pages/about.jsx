@@ -7,7 +7,7 @@ import SEO from '../components/common/SEO/Seo';
 import Header from '../components/layouts/Header/Header';
 import Body from '../components/layouts/Body';
 import BodyContent from '../components/layouts/BodyContent';
-import BodySidebar from '../components/layouts/bodySidebar';
+import BodySidebar from '../components/layouts/BodySidebar';
 import SidebarNav from '../components/common/SidebarNav';
 
 const AboutPage = ({ pageContext, location }) => {
