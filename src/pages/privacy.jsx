@@ -23,6 +23,20 @@ const PrivacyPage = () => {
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
 
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
+
+  const urlSlashRemoved = location.pathname.replace('/', '').replace('/', '');
+
+  const urlArrayDashRemoved = urlSlashRemoved.split('-');
+
+  const customCrumbLabel = urlArrayDashRemoved
+    .map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    })
+    .join(' ');
+
   return (
     <>
       <SEO
@@ -34,8 +48,10 @@ const PrivacyPage = () => {
         Tag="header"
         className="bg-img-page-top"
         fluid={imageDataHeader}
-        textMain="Privacy Policy"
         alt="Metal padlock signifying privacy among our users"
+        textMain="Privacy Policy"
+        crumbs={crumbs}
+        customCrumbLabel={customCrumbLabel}
       />
       <section id="privacy-page">
         <Container className="p-lg-5">

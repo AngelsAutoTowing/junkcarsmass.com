@@ -23,6 +23,20 @@ const BlogPage = () => {
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
 
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
+
+  const urlSlashRemoved = location.pathname.replace('/', '').replace('/', '');
+
+  const urlArrayDashRemoved = urlSlashRemoved.split('-');
+
+  const customCrumbLabel = urlArrayDashRemoved
+    .map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    })
+    .join(' ');
+
   return (
     <>
       <SEO
@@ -34,7 +48,10 @@ const BlogPage = () => {
         Tag="header"
         className="bg-img-page-top"
         fluid={imageDataHeader}
+        alt="Blog page"
         textMain="Junk Car Removal Blog"
+        crumbs={crumbs}
+        customCrumbLabel={customCrumbLabel}
       />
       <Body />
     </>

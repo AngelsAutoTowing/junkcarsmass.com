@@ -83,10 +83,10 @@ const AboutPage = ({ pageContext, location }) => {
         Tag="header"
         className="bg-img-page-top"
         fluid={imageDataHeader}
+        alt={`${siteMetadata.title}'s salvage yard crane picking up scrap metal and junk cars in Massachusetts`}
         textMain={`About ${siteMetadata.title}`}
         crumbs={crumbs}
         customCrumbLabel={customCrumbLabel}
-        alt={`${siteMetadata.title}'s salvage yard crane picking up scrap metal and junk cars in Massachusetts`}
       />
       <Body
         bodyContent={

@@ -22,6 +22,20 @@ const NotFoundPage = () => {
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
 
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
+
+  const urlSlashRemoved = location.pathname.replace('/', '').replace('/', '');
+
+  const urlArrayDashRemoved = urlSlashRemoved.split('-');
+
+  const customCrumbLabel = urlArrayDashRemoved
+    .map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    })
+    .join(' ');
+
   return (
     <>
       <SEO
@@ -33,8 +47,10 @@ const NotFoundPage = () => {
         Tag="header"
         className="bg-img-page-top"
         fluid={imageDataHeader}
-        textMain="Something Went Wrong!"
         alt="404 Error - Oops! This Page Cannot Be Found"
+        textMain="Something Went Wrong!"
+        crumbs={crumbs}
+        customCrumbLabel={customCrumbLabel}
       />
     </>
   );
