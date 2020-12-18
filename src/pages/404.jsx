@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import SEO from '../components/common/SEO/Seo';
 import Header from '../components/layouts/Header/Header';
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ pageContext, location }) => {
   const data = useStaticQuery(graphql`
     query NotFoundPageQ {
       masthead: file(

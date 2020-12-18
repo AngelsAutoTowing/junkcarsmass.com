@@ -4,7 +4,7 @@ import SEO from '../components/common/SEO/Seo';
 import Header from '../components/layouts/Header/Header';
 import Body from '../components/views/Blog/Body';
 
-const BlogPage = () => {
+const BlogPage = ({ pageContext, location }) => {
   const data = useStaticQuery(graphql`
     query BlogPageQ {
       masthead: file(

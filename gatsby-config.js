@@ -55,6 +55,7 @@ module.exports = {
         useAutoGen: true,
         usePathPrefix: '/',
         trailingSlashes: true,
+        exclude: [`/404/`, `/404.html`],
       },
     },
     {

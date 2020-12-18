@@ -4,7 +4,7 @@ import { Col, Container, Table } from 'react-bootstrap';
 import SEO from '../components/common/SEO/Seo';
 import Header from '../components/layouts/Header/Header';
 
-const PrivacyPage = () => {
+const PrivacyPage = ({ pageContext, location }) => {
   const data = useStaticQuery(graphql`
     query PrivacyPageQ {
       masthead: file(
