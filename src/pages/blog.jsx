@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import SEO from '../components/common/SEO/seo';
+import SEO from '../components/common/SEO/Seo';
 import Header from '../components/layouts/Header/Header';
 import Body from '../components/views/Blog/Body';
 
-const BlogPage = ({ pageContext, location }) => {
+const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query BlogPageQ {
       masthead: file(
@@ -35,7 +35,6 @@ const BlogPage = ({ pageContext, location }) => {
         className="bg-img-page-top"
         fluid={imageDataHeader}
         textMain="Junk Car Removal Blog"
-        textSecondary="Everything you need to know cash for cars"
       />
       <Body />
     </>

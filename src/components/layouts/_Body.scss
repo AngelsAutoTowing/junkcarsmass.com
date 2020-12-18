@@ -1,0 +1,15 @@
+.layout-body {
+  margin: 0;
+  padding: 0 1em;
+  & h2,
+  h3,
+  h4 {
+    text-align: left;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .layout-body {
+    padding: 0 7em;
+  }
+}

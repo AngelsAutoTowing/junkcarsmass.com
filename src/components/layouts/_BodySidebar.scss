@@ -1,0 +1,11 @@
+.layout-body-sidebar {
+  margin: 3em 0 0 0;
+  padding: 0;
+}
+
+@include media-breakpoint-up(lg) {
+  .layout-body-sidebar {
+    margin: 0;
+    padding: 0 5em;
+  }
+}

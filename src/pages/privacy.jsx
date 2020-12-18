@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Col, Container, Table } from 'react-bootstrap';
-import SEO from '../components/common/SEO/seo';
+import SEO from '../components/common/SEO/Seo';
 import Header from '../components/layouts/Header/Header';
 
-const PrivacyPage = ({ pageContext, location }) => {
+const PrivacyPage = () => {
   const data = useStaticQuery(graphql`
     query PrivacyPageQ {
       masthead: file(
@@ -35,7 +35,6 @@ const PrivacyPage = ({ pageContext, location }) => {
         className="bg-img-page-top"
         fluid={imageDataHeader}
         textMain="Privacy Policy"
-        textSecondary="Please Read Our Privacy Policy Before Using Our Site"
         alt="Metal padlock signifying privacy among our users"
       />
       <section id="privacy-page">

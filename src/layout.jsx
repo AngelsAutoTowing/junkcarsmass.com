@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Navbar from './components/layouts/Navbar/Navbar';
 import Footer from './components/layouts/Footer/Footer';
 import './layout.scss';
+import CallBtn from './components/common/CallBtn';
 
 const getScrollNode = (element) => {
   return (
@@ -54,6 +55,7 @@ export default class Layout extends React.Component {
       <div className={className} ref={this.siteContainer} id="page-top">
         <Navbar />
         <main>{this.props.children}</main>
+        <CallBtn />
         <Footer />
       </div>
     );

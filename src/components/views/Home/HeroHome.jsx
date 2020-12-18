@@ -34,7 +34,7 @@ const HeroHome = ({ className }) => {
     >
       <Container id="home-banner-section" className="h-100">
         <Row className="h-100 align-items-center justify-content-center text-center">
-          <Col xs={12} lg={8} className="align-self-center">
+          <Col xs={12} lg={6} className="align-self-center">
             <h1 className="px-sm-5 px-3 p-lg-3 mb-2 mb-lg-0 drop-shadow-darker font-weight-bold">
               We pay cash for junk cars
             </h1>
@@ -46,7 +46,7 @@ const HeroHome = ({ className }) => {
               to schedule a same day pickup. We are available 24/7!
             </p>
           </Col>
-          <Col xs={12} md={8} lg={4}>
+          <Col xs={12} md={8} lg={6}>
             <FormHomePage />
           </Col>
         </Row>

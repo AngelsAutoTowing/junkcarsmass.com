@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../components/common/SEO/seo';
+import SEO from '../components/common/SEO/Seo';
 import HeroHome from '../components/views/Home/HeroHome';
 import AnswersHome from '../components/views/Home/AnswersHome';
 import ReviewsHome from '../components/views/Home/ReviewsHome';

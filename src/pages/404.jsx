@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import SEO from '../components/common/SEO/seo';
+import SEO from '../components/common/SEO/Seo';
 import Header from '../components/layouts/Header/Header';
 
 const NotFoundPage = () => {
@@ -34,10 +34,7 @@ const NotFoundPage = () => {
         className="bg-img-page-top"
         fluid={imageDataHeader}
         textMain="Something Went Wrong!"
-        textSecondary="This page cannot be found"
         alt="404 Error - Oops! This Page Cannot Be Found"
-        btnLabel="Return Home"
-        btnLink="/"
       />
     </>
   );

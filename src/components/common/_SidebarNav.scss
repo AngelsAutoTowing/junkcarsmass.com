@@ -1,0 +1,21 @@
+.sidebar-nav {
+  background-color: lightgray;
+  margin-bottom: 2em;
+  & > ul {
+    margin: 0;
+    padding: 1em;
+    & > li {
+      list-style: none;
+      padding: 0.5em 0 1em 0;
+      border-bottom: 1px solid $gray;
+    }
+    & > li:last-child {
+      padding: 0.5em 0 0 0;
+      border-bottom: none;
+    }
+  }
+  & a {
+    color: $darkGray;
+    font-size: 1.2em;
+  }
+}

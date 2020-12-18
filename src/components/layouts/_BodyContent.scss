@@ -1,0 +1,10 @@
+.layout-body-content {
+  margin: 0;
+  padding: 0;
+}
+
+@include media-breakpoint-up(lg) {
+  .layout-body-content {
+    padding: 0 5em;
+  }
+}

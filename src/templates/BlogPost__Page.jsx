@@ -15,7 +15,7 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from 'react-share';
-import SEO from '../components/common/SEO/seo';
+import SEO from '../components/common/SEO/Seo';
 import PostHeader from '../components/views/Blog/PostHeader';
 import ImgAngelsLogo from '../components/images/Logos/img-angels-logo';
 import ButtonInternalLink from '../components/common/Buttons/ButtonInternalLink/ButtonInternalLink';

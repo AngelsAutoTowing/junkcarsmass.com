@@ -23,7 +23,15 @@
 // Import component styling
 @import './components/layouts/Navbar/Navbar';
 @import './components/layouts/Footer/Footer';
+@import './components/layouts/Header/Header';
+@import './components/layouts/Body';
+@import './components/layouts/BodyContent';
+@import './components/layouts/BodySidebar';
+
 @import './components/common/Buttons/Styles/Buttons';
-@import './components/views/Home/HeroHome';
 @import './components/common/Forms/FormHomePage/FormHomePage';
+@import './components/common/CallBtn';
+@import './components/common/SidebarNav';
+
+@import './components/views/Home/HeroHome';
 @import './components/views/Blog/Blog';

@@ -1,5 +1,6 @@
 main {
   color: $pageTextColor;
+  font-family: $font-family-sans-serif;
 }
 
 h1,
@@ -20,6 +21,7 @@ h1 {
 
 h2 {
   color: $h2Color;
+  font-size: 2rem;
 }
 
 h3 {
@@ -38,6 +40,7 @@ a {
 }
 
 p {
+  font-weight: 400;
   a {
     cursor: pointer !important;
     text-decoration: dotted underline !important;
@@ -123,8 +126,9 @@ nav-link.active > h3 {
 }
 
 .breadcrumb {
-  background-color: #778899;
-  margin: 0;
+  background-color: transparent;
+  margin-bottom: 0;
+  margin-top: 2em;
   border-radius: 0;
   justify-content: center;
 }
@@ -134,14 +138,24 @@ nav-link.active > h3 {
   display: flex;
   margin: 0;
   padding: 0;
+  & > span {
+    font-size: 1em !important;
+    font-weight: normal !important;
+  }
+}
+
+li.breadcrumb__list__item {
+  margin-bottom: 0 !important;
 }
 
 .breadcrumb__separator {
   padding: 0 0.5em;
+  filter: drop-shadow(3px 3px 1px black) !important;
 }
 
 .breadcrumb__link {
   color: white;
+  filter: drop-shadow(3px 3px 1px black) !important;
   &:hover {
     color: $primary !important;
     text-decoration: underline !important;
@@ -176,7 +190,18 @@ nav-link.active > h3 {
   .body-banner-text {
     font-size: 2.4em;
   }
+  h2 {
+    font-size: calc(0.5rem + 2vw);
+  }
   .display-5 {
     font-size: calc(0.5rem + 1.5vw);
+  }
+  .breadcrumb__list {
+    & > span {
+      font-size: 1.2em !important;
+    }
+  }
+  .breadcrumb__link {
+    font-size: 1.2em !important;
   }
 }
