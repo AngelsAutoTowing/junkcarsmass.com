@@ -7,7 +7,8 @@ import ProcessHome from '../components/views/Home/ProcessHome';
 import CompanyHome from '../components/views/Home/CompanyHome';
 
 const IndexPage = () => {
-  const canonical = location.href;
+  let canonical = typeof window !== 'undefined' ? window.location.href : '';
+
   return (
     <>
       <SEO

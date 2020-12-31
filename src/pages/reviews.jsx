@@ -49,7 +49,7 @@ const ReviewsPage = ({ pageContext, location }) => {
   const imageDataHeader = data.headerBgImg.childImageSharp.fluid;
   const imgContentTop = data.imgContentTop.childImageSharp.fluid;
   const siteMetadata = data.companyName.siteMetadata;
-  const canonical = location.href;
+  let canonical = typeof window !== 'undefined' ? window.location.href : '';
 
   const {
     breadcrumb: { crumbs },

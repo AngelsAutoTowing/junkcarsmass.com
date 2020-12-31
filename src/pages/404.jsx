@@ -21,7 +21,7 @@ const NotFoundPage = ({ pageContext, location }) => {
   `);
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
-  const canonical = location.href;
+  let canonical = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
     <>
