@@ -91,7 +91,7 @@ const BlogPostTemplate = ({ data }) => {
           {post.frontmatter.title}
         </span>
       </Container>
-      <Container className="mt-5">
+      <Container className="my-5">
         <Row className="mx-0 px-0 mb-5 mb-lg-0 container justify-content-center">
           <Col lg={9} className="px-0 pr-lg-5 mb-5">
             <Img
@@ -150,7 +150,7 @@ const BlogPostTemplate = ({ data }) => {
             <p className="lead mb-5 py-1 text-dark bg-secondary rounded drop-shadow text-center">
               <strong className="text-white">About the author</strong>
             </p>
-            <Col className="mx-auto" xs={12} md={8} lg={12}>
+            <Col className="mx-auto text-center" xs={12} md={8} lg={12}>
               <ImgAngelsLogo className="no-drop-shadow" />
             </Col>
             <div className="text-center text-dark mt-3">
@@ -165,7 +165,7 @@ const BlogPostTemplate = ({ data }) => {
 
             <p className="text-left text-dark">
               If you are interested in speaking with Angel, please call{' '}
-              <a className="" href="tel:+17819363974">
+              <a className="text-link-on-white" href="tel:+17819363974">
                 (781) 936-3974
               </a>
               .

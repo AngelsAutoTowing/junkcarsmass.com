@@ -21,13 +21,14 @@ const NotFoundPage = ({ pageContext, location }) => {
   `);
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
+  const canonical = location.href;
 
   return (
     <>
       <SEO
         title="Something Went Wrong! Page Cannot Be Found | Angels Towing - Junk Car Mass"
         description="Something Went Wrong! This page cannot be found"
-        canonicalLink="https://junkcarsmass.com/404/"
+        canonicalLink={canonical}
       />
       <HeaderPageMissing
         Tag="header"

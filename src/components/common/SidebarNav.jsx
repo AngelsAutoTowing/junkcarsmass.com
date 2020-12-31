@@ -7,6 +7,7 @@ const SidebarNav = ({ navList }) => {
       <ul>
         {navList.map((item) => (
           <li key={item.name}>
+            <i className="fas fa-chevron-right mr-2"></i>
             <Link to={item.url}>{item.name}</Link>
           </li>
         ))}

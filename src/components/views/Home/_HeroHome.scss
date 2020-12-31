@@ -34,16 +34,13 @@
   @include media-breakpoint-up(lg) {
     height: 100vh;
     min-height: 40rem;
-    padding-top: 8rem;
+    padding-top: 11rem;
     padding-bottom: 10rem;
+    h1 {
+      font-size: 5rem;
+    }
     p {
       font-size: 1rem;
-    }
-    h1 {
-      font-size: 3rem;
-    }
-    h2 {
-      font-size: 3rem;
     }
   }
   @include media-breakpoint-up(xl) {
@@ -52,7 +49,7 @@
       margin-bottom: 0;
     }
     p {
-      font-size: 2rem;
+      font-size: 1.3rem;
       margin-bottom: 0;
     }
   }

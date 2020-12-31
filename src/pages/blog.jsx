@@ -22,15 +22,13 @@ const BlogPage = ({ pageContext, location }) => {
   `);
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
+  const canonical = location.href;
 
   const {
     breadcrumb: { crumbs },
   } = pageContext;
-
   const urlSlashRemoved = location.pathname.replace('/', '').replace('/', '');
-
   const urlArrayDashRemoved = urlSlashRemoved.split('-');
-
   const customCrumbLabel = urlArrayDashRemoved
     .map((word) => {
       return word[0].toUpperCase() + word.substring(1);
@@ -42,7 +40,7 @@ const BlogPage = ({ pageContext, location }) => {
       <SEO
         title="Junk Car Removal Blog - Everything About Cash For Cars | Angels Towing - Junk Car Mass"
         description="Thinking about scrapping your junk car for cash? Before you lose out on money, check out our blog posts to learn tips, tricks, and guides to selling your car"
-        canonicalLink="https://junkcarsmass.com/blog/"
+        canonicalLink={canonical}
       />
       <Header
         Tag="header"

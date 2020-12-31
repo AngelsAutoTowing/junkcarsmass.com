@@ -11,12 +11,12 @@ import BodySidebar from '../components/layouts/BodySidebar';
 import SidebarNav from '../components/common/SidebarNav';
 import FormSidebar from '../components/common/Forms/FormSidebar';
 
-const AboutPage = ({ pageContext, location }) => {
+const JunkCarRemoval = ({ pageContext, location }) => {
   const data = useStaticQuery(graphql`
-    query AboutPageQ {
+    query JunkCarRemovalQ {
       headerBgImg: file(
         relativePath: {
-          eq: "assets/images/about/junkyard-salvage-yard-angels-towing-junk-car-mass.jpg"
+          eq: "assets/images/junk-car-removal/we-pay-cash-for-junk-cars-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {
@@ -32,7 +32,7 @@ const AboutPage = ({ pageContext, location }) => {
       }
       imgContentTop: file(
         relativePath: {
-          eq: "assets/images/about/tow-truck-salvage-yard-angels-towing-junk-car-mass.jpg"
+          eq: "assets/images/junk-car-removal/scrap-car-taking-up-space-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {
@@ -62,7 +62,11 @@ const AboutPage = ({ pageContext, location }) => {
 
   const navList = [
     {
-      name: 'See Our Service Areas',
+      name: 'Learn More About Us',
+      url: '/about/',
+    },
+    {
+      name: 'Check Our Service Areas',
       url: '/service-areas/',
     },
     {
@@ -83,7 +87,7 @@ const AboutPage = ({ pageContext, location }) => {
         className="bg-img-page-top"
         fluid={imageDataHeader}
         alt={`${siteMetadata.title}'s salvage yard crane picking up scrap metal and junk cars in Massachusetts`}
-        textMain={`About ${siteMetadata.title}`}
+        textMain="We'll pay the most cash for your junk car"
         crumbs={crumbs}
         customCrumbLabel={customCrumbLabel}
       />
@@ -91,38 +95,60 @@ const AboutPage = ({ pageContext, location }) => {
         bodyContent={
           <BodyContent>
             <Container>
-              <h2 className="mb-3">Family Owned & Operated for 20+ Years</h2>
+              <h2 className="mb-3">
+                Old vehicle taking up space? We'll pay cash for it
+              </h2>
               <span className="display-6 font-italic">
-                Proudly Serving Massachusetts & Rhose Island residents with
-                affordable junkyard & towing services
+                Free towing - any make, model, condition (No title, no problem)
               </span>
               <Img fluid={imgContentTop} className="my-5" />
-              <h3>Background</h3>
+              <h3>Cash For Junk Cars</h3>
               <p>
-                {siteMetadata.title} began as a small junkyard in Plympton,
-                Massachusetts. We quickly grew to become a major retailer for
-                used auto parts, a full-scale towing service, and a well known
-                junk car removal company.
+                Tired of looking at that broken-down junk car sitting in your
+                driveway?
+              </p>
+              <p>
+                Got a damaged vehicle that no longer runs just taking up space
+                in the garage?
+              </p>
+              <p>We are here to help!</p>
+              <p>
+                <strong>
+                  We offer the highest amount of cash for the removal of your
+                  junk car!
+                </strong>
+              </p>
+              <p>
+                Selling a junk car can be a daunting process, but it doesn’t
+                have to be. Our team of experts is here to help you schedule a
+                pick-up and receive top dollar for your clunker.
+              </p>
+              <p>
+                Not only will your automobile be removed from your property
+                quickly and easily, but we’ll do it for free! We offer{' '}
+                <strong>
+                  free towing, same-day pickup, 24/7 availability, and guarantee
+                  no hidden fees.
+                </strong>
               </p>
               <p className="mb-5">
-                We now provide our services to a 40-mile radius around our
-                junkyard and continue to add tow trucks to our fleet.
+                With over 20 years of experience in the junk car industry, we
+                know how to evaluate your car, truck, SUV, or van and make an
+                offer you can’t refuse. We buy{' '}
+                <strong>any make, model, year, or condition</strong>, so you can
+                feel confident in knowing that your vehicle holds value.
               </p>
-              <h3>Our Junkyard</h3>
-              <p className="mb-5">
-                From used cars to scrap metal, our salvage yard is always
-                working hard to recycle and do our part for the environment.
-                It's amazing to think about how many tons of metal pass through
-                our junkyard each year and contribute to cleaning up
-                neighborhoods, freeing up space in your garage, and helping
-                families in need of fast cash for their junk cars.
-              </p>
-              <h3>Our Tow Trucks</h3>
-              <p className="mb-5">
-                You may have seen our tow trucks traveling throughout MA & RI
-                for pick ups. We are actually in the middle of transforming our
-                fleet of trucks to a new design and paint job. We are very
-                excited to launch our new branding.
+              <h3>Contact Us</h3>
+              <p>
+                Let's schedule a time so one of our tow trucks can come out to
+                your house and haul away that junk car. Give us a call at{' '}
+                <a
+                  className="font-weight-bold text-secondary"
+                  href="tel:+16179976510"
+                >
+                  (617) 977-6510
+                </a>{' '}
+                or fill out our form.
               </p>
             </Container>
           </BodyContent>
@@ -145,4 +171,4 @@ const AboutPage = ({ pageContext, location }) => {
   );
 };
 
-export default AboutPage;
+export default JunkCarRemoval;

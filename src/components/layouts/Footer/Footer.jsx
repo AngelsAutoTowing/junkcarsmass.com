@@ -58,15 +58,6 @@ const Footer = () => {
                 </a>
               </Container>
               <Container className="px-0 text-sans-serif pt-2 d-flex mb-2">
-                <a href="tel:+17819363974">
-                  <i className="fas fa-phone mt-1" />
-                </a>
-
-                <a className="ml-3" href="tel:+17819363974">
-                  Office: (781) 936-3974
-                </a>
-              </Container>
-              <Container className="px-0 text-sans-serif pt-2 d-flex mb-2">
                 <a
                   href="mailto:angelstowing@hotmail.com?Subject=Important%20Email%20From%20Website"
                   target="_blank"
@@ -199,8 +190,16 @@ const Footer = () => {
                   Copyright &copy; {new Date().getFullYear()}{' '}
                   <Link className="text-primary font-weight-bold" to="/">
                     Angels Towing - Junk Car Mass
-                  </Link>{' '}
-                  All Rights Reserved
+                  </Link>
+                </p>
+                <p>
+                  All Rights Reserved{' '}
+                  <Link
+                    className="text-primary font-weight-bold"
+                    to="/privacy/"
+                  >
+                    Privacy Policy
+                  </Link>
                 </p>
               </Col>
               <Col xs={12} md={12} className="small text-center">

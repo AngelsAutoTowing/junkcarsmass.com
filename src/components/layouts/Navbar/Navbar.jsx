@@ -135,14 +135,14 @@ const Navbar = () => {
                 >
                   <li>
                     <Link
-                      to="/junk-cars-for-cash/"
+                      to="/junk-car-removal/"
                       onClick={handleMobileNavToggle}
                       className="underline"
                     >
-                      Junk Cars For Cash
+                      Junk Car Removal
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       to="/scrap-metal/"
                       onClick={handleMobileNavToggle}
@@ -168,10 +168,10 @@ const Navbar = () => {
                     >
                       Auto Parts
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="#"
                   id="howWeHelp"
@@ -206,7 +206,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/blog/"
@@ -219,9 +219,9 @@ const Navbar = () => {
             </ul>
             <li>
               <div>
-                <Link to="/contact/" className="nav-btn">
-                  Contact
-                </Link>
+                <a href="tel:+16179976510" className="nav-btn">
+                  Call Us
+                </a>
               </div>
             </li>
             <Row className="nav-mobile-cta-btns">

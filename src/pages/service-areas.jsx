@@ -11,12 +11,12 @@ import BodySidebar from '../components/layouts/BodySidebar';
 import SidebarNav from '../components/common/SidebarNav';
 import FormSidebar from '../components/common/Forms/FormSidebar';
 
-const AboutPage = ({ pageContext, location }) => {
+const ServiceAreasPage = ({ pageContext, location }) => {
   const data = useStaticQuery(graphql`
-    query AboutPageQ {
+    query ServiceAreasPageQ {
       headerBgImg: file(
         relativePath: {
-          eq: "assets/images/about/junkyard-salvage-yard-angels-towing-junk-car-mass.jpg"
+          eq: "assets/images/service-areas/massachusetts-map-service-areas-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {
@@ -32,7 +32,7 @@ const AboutPage = ({ pageContext, location }) => {
       }
       imgContentTop: file(
         relativePath: {
-          eq: "assets/images/about/tow-truck-salvage-yard-angels-towing-junk-car-mass.jpg"
+          eq: "assets/images/service-areas/massachusetts-boston-city-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {
@@ -62,8 +62,8 @@ const AboutPage = ({ pageContext, location }) => {
 
   const navList = [
     {
-      name: 'See Our Service Areas',
-      url: '/service-areas/',
+      name: 'Learn More About Us',
+      url: '/about/',
     },
     {
       name: 'Read Our Reviews',
@@ -83,7 +83,7 @@ const AboutPage = ({ pageContext, location }) => {
         className="bg-img-page-top"
         fluid={imageDataHeader}
         alt={`${siteMetadata.title}'s salvage yard crane picking up scrap metal and junk cars in Massachusetts`}
-        textMain={`About ${siteMetadata.title}`}
+        textMain="Massachusetts & Rhode Island Service Areas"
         crumbs={crumbs}
         customCrumbLabel={customCrumbLabel}
       />
@@ -91,38 +91,45 @@ const AboutPage = ({ pageContext, location }) => {
         bodyContent={
           <BodyContent>
             <Container>
-              <h2 className="mb-3">Family Owned & Operated for 20+ Years</h2>
+              <h2 className="mb-3">
+                We Service Eastern & Central Massachusetts and Rhode Island
+              </h2>
               <span className="display-6 font-italic">
-                Proudly Serving Massachusetts & Rhose Island residents with
-                affordable junkyard & towing services
+                From Cape Cod to Boston, South Shore to Worcester, South Coast
+                to Providence
               </span>
               <Img fluid={imgContentTop} className="my-5" />
-              <h3>Background</h3>
-              <p>
-                {siteMetadata.title} began as a small junkyard in Plympton,
-                Massachusetts. We quickly grew to become a major retailer for
-                used auto parts, a full-scale towing service, and a well known
-                junk car removal company.
+              <h3>Our Location</h3>
+              <p className="no-drop-shadow mb-5">
+                Our junkyard is centrally located at{' '}
+                <a
+                  href="https://www.google.com/maps?cid=13760398526388246013"
+                  target="_blank"
+                  className="text-link-on-white"
+                >
+                  87 County Rd, Plympton, MA 02367
+                </a>
+                . We service a 40-mile radius around our location, so this
+                includes Massachusetts and Rhode Island.
               </p>
+              <h3>Massachusetts</h3>
               <p className="mb-5">
-                We now provide our services to a 40-mile radius around our
-                junkyard and continue to add tow trucks to our fleet.
+                Our tow trucks will travel to Boston, North Shore, Central MA
+                (Worcester), South Shore, South Coast (Fall River), and Cape
+                Cod.
               </p>
-              <h3>Our Junkyard</h3>
+              <h3>Rhode Island</h3>
               <p className="mb-5">
-                From used cars to scrap metal, our salvage yard is always
-                working hard to recycle and do our part for the environment.
-                It's amazing to think about how many tons of metal pass through
-                our junkyard each year and contribute to cleaning up
-                neighborhoods, freeing up space in your garage, and helping
-                families in need of fast cash for their junk cars.
-              </p>
-              <h3>Our Tow Trucks</h3>
-              <p className="mb-5">
-                You may have seen our tow trucks traveling throughout MA & RI
-                for pick ups. We are actually in the middle of transforming our
-                fleet of trucks to a new design and paint job. We are very
-                excited to launch our new branding.
+                Our tow trucks only travel to the metro Providence area. We
+                prefer not to go any further than the city limits. If you have
+                any questions about your location, please just give us a call at{' '}
+                <a
+                  className="font-weight-bold text-link-on-white"
+                  href="tel:+16179976510"
+                >
+                  (617) 977-6510
+                </a>
+                .
               </p>
             </Container>
           </BodyContent>
@@ -145,4 +152,4 @@ const AboutPage = ({ pageContext, location }) => {
   );
 };
 
-export default AboutPage;
+export default ServiceAreasPage;

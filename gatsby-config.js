@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: 'GTM-T37DHXJ',
+        id: 'GTM-K6ZTJQP',
         includeInDevelopment: false,
         defaultDataLayer: { platform: 'gatsby' },
       },
@@ -66,10 +66,7 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [
-              // REMOVE DISALLOW WHEN GOING LIVE
-              { userAgent: '*' },
-            ],
+            policy: [{ userAgent: '*' }],
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
