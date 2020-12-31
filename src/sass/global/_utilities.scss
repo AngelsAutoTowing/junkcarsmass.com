@@ -73,6 +73,16 @@ li:last-child {
   vertical-align: middle !important;
 }
 
+.img-wrap {
+  float: left;
+  width: 500px;
+  padding: 0 3em 0 0;
+}
+
+.text-wrap {
+  text-align: justify;
+}
+
 @media screen and (max-width: 372px) {
   .hide-xs {
     margin: 0 !important;

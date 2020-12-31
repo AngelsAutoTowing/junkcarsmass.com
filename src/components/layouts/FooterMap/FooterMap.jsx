@@ -8,7 +8,8 @@ const FooterMap = () => {
     <section className="bg-dark section-no-margin py-5 my-5">
       <Container fluid className="py-5 px-0">
         <h2 className="display-4 font-weight-bold text-primary mb-5 drop-shadow-darker">
-          Proudly Serving Massachusetts
+          Proudly Serving <br />
+          Massachusetts & Rhode Island
         </h2>
         <Row noGutters className="justify-content-center mt-5 pt-5">
           <Col className="mb-5 mb-lg-0 drop-shadow-darker" xs={12} lg={6}>
@@ -24,11 +25,11 @@ const FooterMap = () => {
           </Col>
           <Col className="mb-5 mb-lg-0" xs={12} lg={6}>
             <Container>
-              <h3 className="text-light drop-shadow-dark p-1 font-weight-bold mb-4 text-left">
+              <h3 className="text-light drop-shadow-dark font-weight-bold mb-4 text-left">
                 Angels Towing - Junk Cars Mass
               </h3>
-              <p className="no-drop-shadow">
-                We service a 50 mile radius around our junkyard location at{' '}
+              <p className="no-drop-shadow mb-5">
+                We service a 40 mile radius around our junkyard location at{' '}
                 <a
                   href="https://www.google.com/maps?cid=13760398526388246013"
                   target="_blank"
@@ -36,14 +37,10 @@ const FooterMap = () => {
                 >
                   87 County Rd, Plympton, MA 02367
                 </a>
-                . This includes all of the South Shore, Cape Cod, and Boston
-                area.
+                . This includes all of the South Shore, Cape Cod, Boston, North
+                Shore, Central MA, and Providence metro area.
               </p>
-              <p className="no-drop-shadow">
-                Our tow trucks will travel to Plymouth County, Barnstable
-                County, Bristol County, Norfolk County, and Suffolk County.
-              </p>
-              <h3 className="text-light drop-shadow-dark p-1 font-weight-bold my-4 text-left">
+              <h3 className="text-light drop-shadow-dark font-weight-bold my-4 text-left">
                 Directions to our Junkyard
               </h3>
               <p className="no-drop-shadow">

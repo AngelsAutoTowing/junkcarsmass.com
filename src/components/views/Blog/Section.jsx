@@ -36,7 +36,7 @@ const Blog__Section = ({ className }) => {
 
   return (
     <Container className="mt-5 pt-5">
-      <h2 className="text-center mt-0 mb-5">Latest Construction Blog Posts</h2>
+      <h2 className="text-center mt-0 mb-5">Latest Junk Car Blog Posts</h2>
       <Row className="justify-content-center align-items-baseline">
         {data.allMdx.edges.map((post) => (
           <Col xs={12} md={6} lg={6} key={post.node.id}>

@@ -1,5 +1,6 @@
 main {
   color: $pageTextColor;
+  font-family: $font-family-sans-serif;
 }
 
 h1,
@@ -16,10 +17,12 @@ h6 {
 
 h1 {
   color: $h1Color;
+  -webkit-text-stroke: 1px #003399 !important;
 }
 
 h2 {
   color: $h2Color;
+  font-size: 2rem;
 }
 
 h3 {
@@ -38,6 +41,7 @@ a {
 }
 
 p {
+  font-weight: 400;
   a {
     cursor: pointer !important;
     text-decoration: dotted underline !important;
@@ -123,8 +127,9 @@ nav-link.active > h3 {
 }
 
 .breadcrumb {
-  background-color: #778899;
-  margin: 0;
+  background-color: transparent;
+  margin-bottom: 0;
+  margin-top: 2em;
   border-radius: 0;
   justify-content: center;
 }
@@ -134,14 +139,24 @@ nav-link.active > h3 {
   display: flex;
   margin: 0;
   padding: 0;
+  & > span {
+    font-size: 1em !important;
+    font-weight: normal !important;
+  }
+}
+
+li.breadcrumb__list__item {
+  margin-bottom: 0 !important;
 }
 
 .breadcrumb__separator {
   padding: 0 0.5em;
+  filter: drop-shadow(3px 3px 1px black) !important;
 }
 
 .breadcrumb__link {
   color: white;
+  filter: drop-shadow(3px 3px 1px black) !important;
   &:hover {
     color: $primary !important;
     text-decoration: underline !important;
@@ -169,14 +184,44 @@ nav-link.active > h3 {
   line-height: 1.2;
 }
 
+.display-6 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
 @include media-breakpoint-up(lg) {
+  h1 {
+    -webkit-text-stroke: 1.5px #003399 !important;
+  }
+
+  h2 {
+    font-size: calc(0.5rem + 2vw);
+  }
+
   .fa-mobile-4x {
     font-size: 4em;
   }
+
   .body-banner-text {
     font-size: 2.4em;
   }
+
   .display-5 {
     font-size: calc(0.5rem + 1.5vw);
+  }
+
+  .display-6 {
+    font-size: calc(0.5rem + 1.2vw);
+  }
+
+  .breadcrumb__list {
+    & > span {
+      font-size: 1.2em !important;
+    }
+  }
+
+  .breadcrumb__link {
+    font-size: 1.2em !important;
   }
 }

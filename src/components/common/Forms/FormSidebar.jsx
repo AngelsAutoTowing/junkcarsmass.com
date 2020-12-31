@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, Col, Container } from 'react-bootstrap';
 
-const FormHomePage = () => {
+const FormSidebar = () => {
   const [contact, setContact] = useState({
     fullName: '',
     phone: '',
@@ -11,7 +11,7 @@ const FormHomePage = () => {
     make: '',
     model: '',
     year: '',
-    foundUs: '',
+    findUs: '',
   });
 
   const {
@@ -22,7 +22,7 @@ const FormHomePage = () => {
     make,
     model,
     year,
-    foundUs,
+    findUs,
   } = contact;
 
   const handleChange = (e) =>
@@ -30,24 +30,37 @@ const FormHomePage = () => {
 
   return (
     <Form
-      name="form-home-page"
+      name="form-sidebar"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      className="bg-light border border-primary rounded shadow p-2 p-md-4"
-      id="form-home-page"
+      className="bg-dark border border-primary rounded shadow p-2 p-md-4"
+      id="form-sidebar"
     >
-      <span className="display-5 text-secondary font-weight-bold mb-1 mt-3 mt-lg-0">
+      <p className="lead text-primary font-weight-bold text-center mb-1 mt-3 mt-lg-0">
         REQUEST CAR REMOVAL
-      </span>
+      </p>
       <hr className="divider pb-3 drop-shadow" />
-      <input type="hidden" name="form-name" value="form-home-page" />
+      <Container className="pt-2 pb-4">
+        <p className="text-light">
+          Wondering what your junk car is worth? Need to get that clunker picked
+          up right away?
+        </p>
+        <p className="text-light">
+          Give us a call at{' '}
+          <a className="font-weight-bold" href="tel:+16179976510">
+            (617) 977-6510
+          </a>{' '}
+          or fill out the form below.
+        </p>
+      </Container>
+      <input type="hidden" name="form-name" value="form-sidebar" />
       <Container>
         <Form.Row>
-          <Col xs={12} lg={6} className="order-1 order-lg-1">
+          <Col xs={12} className="order-1 order-lg-1">
             <Form.Group
               className="text-secondary"
-              controlId="formHomePageFullName"
+              controlId="formSidebarFullName"
             >
               <Form.Control
                 name="fullName"
@@ -59,8 +72,8 @@ const FormHomePage = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} lg={6} className="order-2 order-lg-1">
-            <Form.Group controlId="formHomePagePhone">
+          <Col xs={12} className="order-2 order-lg-1">
+            <Form.Group controlId="formSidebarPhone">
               <Form.Control
                 name="phone"
                 type="tel"
@@ -71,8 +84,8 @@ const FormHomePage = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} lg={6} className="order-3 order-lg-1">
-            <Form.Group controlId="formHomePageEmail">
+          <Col xs={12} className="order-3 order-lg-1">
+            <Form.Group controlId="formSidebarEmail">
               <Form.Control
                 name="email"
                 type="email"
@@ -83,8 +96,8 @@ const FormHomePage = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} lg={6} className="order-4 order-lg-1">
-            <Form.Group controlId="formHomePagePickupLocation">
+          <Col xs={12} className="order-4 order-lg-1">
+            <Form.Group controlId="formSidebarPickupLocation">
               <Form.Control
                 name="pickupLocation"
                 type="text"
@@ -95,8 +108,8 @@ const FormHomePage = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} lg={6} className="order-5 order-lg-1">
-            <Form.Group controlId="formHomePageMake">
+          <Col xs={12} className="order-5 order-lg-1">
+            <Form.Group controlId="formSidebarMake">
               <Form.Control
                 name="make"
                 type="text"
@@ -107,8 +120,8 @@ const FormHomePage = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} lg={6} className="order-6 order-lg-1">
-            <Form.Group controlId="formHomePageModel">
+          <Col xs={12} className="order-6 order-lg-1">
+            <Form.Group controlId="formSidebarModel">
               <Form.Control
                 name="model"
                 type="text"
@@ -119,11 +132,11 @@ const FormHomePage = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} lg={6} className="order-7 order-lg-1">
-            <Form.Group controlId="formHomePageYear">
+          <Col xs={12} className="order-7 order-lg-1">
+            <Form.Group controlId="formSidebarYear">
               <Form.Control
                 name="year"
-                type="number"
+                type="text"
                 value={year}
                 onChange={handleChange}
                 placeholder="Year"
@@ -131,17 +144,17 @@ const FormHomePage = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} lg={6} className="order-8 order-lg-1">
-            <Form.Group controlId="formHomePageFindUs">
+          <Col xs={12} className="order-8 order-lg-1">
+            <Form.Group controlId="formSidebarFindUs">
               <Form.Control
-                name="foundUs"
+                name="findUs"
                 as="select"
-                value={foundUs}
+                value={findUs}
                 onChange={handleChange}
                 required
               >
                 <option value="" disabled hidden>
-                  Found Us?
+                  How Did You Find Us?
                 </option>
                 <option value="Website (Yellowpages, etc.)">
                   Directory (Yellowpages, etc.)
@@ -177,11 +190,11 @@ const FormHomePage = () => {
 };
 
 Form.defaultProps = {
-  formname: `contact-form-home`,
+  formname: `contact-form-sidebar`,
 };
 
 Button.propTypes = {
   formname: PropTypes.string,
 };
 
-export default FormHomePage;
+export default FormSidebar;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Col, Container, Table } from 'react-bootstrap';
-import SEO from '../components/common/SEO/seo';
+import SEO from '../components/common/SEO/Seo';
 import Header from '../components/layouts/Header/Header';
 
 const PrivacyPage = ({ pageContext, location }) => {
@@ -22,29 +22,42 @@ const PrivacyPage = ({ pageContext, location }) => {
   `);
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
+  let canonical = typeof window !== 'undefined' ? window.location.href : '';
+
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
+  const urlSlashRemoved = location.pathname.replace('/', '').replace('/', '');
+  const urlArrayDashRemoved = urlSlashRemoved.split('-');
+  const customCrumbLabel = urlArrayDashRemoved
+    .map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    })
+    .join(' ');
 
   return (
     <>
       <SEO
         title="Privacy Policy - Your Privacy Is Critically Important To Us | Angels Towing - Junk Car Mass"
         description=""
-        canonicalLink="https://junkcarsmass.com/privacy/"
+        canonicalLink={canonical}
       />
       <Header
         Tag="header"
         className="bg-img-page-top"
         fluid={imageDataHeader}
-        textMain="Privacy Policy"
-        textSecondary="Please Read Our Privacy Policy Before Using Our Site"
         alt="Metal padlock signifying privacy among our users"
+        textMain="Privacy Policy"
+        crumbs={crumbs}
+        customCrumbLabel={customCrumbLabel}
       />
       <section id="privacy-page">
         <Container className="p-lg-5">
           <Container className="mx-auto py-3 px-5">
-            <h2 className="mt-2 display-4 text-primary">
+            <h2 className="mt-2 display-4 text-secondary">
               Welcome to Our Privacy Policy
             </h2>
-            <hr className="divider my-4" />
+            <hr className="divider my-4 drop-shadow" />
           </Container>
           <h3 className="text-left mt-5 mb-4">
             Your privacy is critically important to us.
@@ -206,92 +219,16 @@ const PrivacyPage = ({ pageContext, location }) => {
           </p>
           <Container className="pt-5 px-0 px-lg-5">
             <p className="text-center mb-5 lead font-weight-bold">
-              If you have any questions about this Privacy Policy, please
-              contact us.
+              If you have any questions about this Privacy Policy, please call
+              us at{' '}
+              <a
+                className="font-weight-bold text-link-on-white"
+                href="tel:+16179976510"
+              >
+                (617) 977-6510
+              </a>
+              .
             </p>
-            <Col xs={12} md={8} lg={6} className="mx-auto">
-              <Container className="bg-dark border border-primary p-3 p-lg-3">
-                <h3 className="text-center bg-contact-bar text-white p-2">
-                  <span className="drop-shadow">Contact Us Today</span>
-                </h3>
-                <h4 className="text-left text-white">Address:</h4>
-                <Container className="text-sans-serif d-flex mb-4 ml-3">
-                  <i className="text-primary fas fa-2x fa-home mb-3"></i>
-                  <a
-                    className="ml-1-25 text-white"
-                    href="https://goo.gl/maps/MZFJ1hR87hQpDgK16"
-                    target="_blank"
-                  >
-                    87 County Rd
-                    <br />
-                    Plympton, MA 02367
-                  </a>
-                </Container>
-                <h4 className="text-left text-white">Call Us:</h4>
-                <Container className="text-sans-serif d-flex mb-4 ml-3">
-                  <i className="text-primary fas fa-2x fa-phone mb-3"></i>
-                  <a className="ml-3 text-white" href="tel:+17819363974">
-                    (781) 936-3974
-                  </a>
-                </Container>
-                <h4 className="text-left text-white">Email Us:</h4>
-                <Container className="text-sans-serif d-flex mb-4 ml-3">
-                  <i className="text-primary fas fa-2x fa-envelope mb-3"></i>
-                  <a
-                    className="ml-3 text-white"
-                    href="mailto:angelstowing@hotmail.com?Subject=Important%20Email%20From%20Website"
-                    target="_blank"
-                    rel="nofollow"
-                  >
-                    angelstowing
-                    <wbr />
-                    @hotmail.com
-                    <wbr />
-                    .com
-                  </a>
-                </Container>
-                <h4 className="text-left text-white">Hours of Operation:</h4>
-                <Container className="text-sans-serif d-flex ml-3">
-                  <i className="text-primary fas fa-2x fa-clock mt-2"></i>
-                  <Table
-                    className="ml-2 font-weight-bold text-white nap-text"
-                    borderless
-                    size="sm"
-                  >
-                    <tbody>
-                      <tr>
-                        <td>Monday</td>
-                        <td>7AM–5PM</td>
-                      </tr>
-                      <tr>
-                        <td>Tuesday</td>
-                        <td>7AM–5PM</td>
-                      </tr>
-                      <tr>
-                        <td>Wednesday</td>
-                        <td>7AM–5PM</td>
-                      </tr>
-                      <tr>
-                        <td>Thursday</td>
-                        <td>7AM–5PM</td>
-                      </tr>
-                      <tr>
-                        <td>Friday</td>
-                        <td>7AM–5PM</td>
-                      </tr>
-                      <tr>
-                        <td>Saturday</td>
-                        <td>7AM–2PM</td>
-                      </tr>
-                      <tr>
-                        <td>Sunday</td>
-                        <td className="text-primary">Closed</td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </Container>
-              </Container>
-            </Col>
           </Container>
         </Container>
       </section>

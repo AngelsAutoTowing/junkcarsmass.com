@@ -8,7 +8,7 @@ const PostHeader = ({ className, hOne, author, date, timeToRead }) => {
     query PostHeaderQ {
       masthead: file(
         relativePath: {
-          eq: "assets/images/pages/blog/blog-pencils-pens-tools-mdh-construction-general-contractor-plymouth-massachusetts.jpg"
+          eq: "assets/images/pages/blog/junk-car-removal-blog-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {

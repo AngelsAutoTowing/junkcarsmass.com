@@ -1,0 +1,19 @@
+.call-btn {
+  position: fixed;
+  bottom: 14px;
+  right: 8px;
+  z-index: 9999;
+  filter: drop-shadow(3px 3px 5px black);
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $primary;
+}
+
+@include media-breakpoint-up(lg) {
+  .call-btn {
+    display: none;
+  }
+}

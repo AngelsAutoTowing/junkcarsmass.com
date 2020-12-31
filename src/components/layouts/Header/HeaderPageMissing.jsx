@@ -1,16 +1,8 @@
 import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
 import { Container } from 'react-bootstrap';
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
-const Header = ({
-  className,
-  fluid,
-  alt,
-  textMain,
-  crumbs,
-  customCrumbLabel,
-}) => {
+const HeaderPageMissing = ({ className, fluid, alt, textMain }) => {
   return (
     <BackgroundImage
       Tag="header"
@@ -21,14 +13,9 @@ const Header = ({
     >
       <Container className="header-container">
         <h1>{textMain}</h1>
-        <Breadcrumb
-          crumbs={crumbs}
-          crumbSeparator="/"
-          crumbLabel={customCrumbLabel}
-        />
       </Container>
     </BackgroundImage>
   );
 };
 
-export default Header;
+export default HeaderPageMissing;

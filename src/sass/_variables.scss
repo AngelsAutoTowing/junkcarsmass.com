@@ -3,16 +3,16 @@
 // Color overrides
 
 // Set a custom color
-$green: #20a000 !default;
+$green: #20a000;
 $teal: #62c6c3;
 $blueIce: #c2e7da;
 $greenFlower: #f1ffe7;
-$purple: #1a1b41 !default;
+$purple: #1a1b41;
 $darkBlue: #011627;
 $light: #f8f9fa;
 $lightGray: #e8e8e8;
 $bronze: #b08d57;
-$silver: #aaa9ad;
+$silver: #555555;
 $gold: #d4af37;
 $gray: #343a40;
 $darkGray: #212529;
@@ -51,14 +51,18 @@ $heroSubTextColor: white;
 $pageBannerH1Color: #fff8dc;
 $pageBannerH2Color: white;
 
+// Typography
+
+$h1Color: $primary;
+$h2Color: $secondary;
+$h3Color: $darkGray;
+$h4Color: $silver;
+
 // Main Content
 
 $pageBackground: $light;
 $pageTextColor: hsl(0, 0, 23);
 $pageLinkColor: $primary;
-$h1Color: hsl(30, 100, 13);
-$h2Color: hsl(27, 82, 37);
-$h3Color: $secondary;
 $bgHeadlineBarColor: #008000;
 $bgContactBarColor: #1e90ff;
 $bgBreadcrumbBarColor: #778899;
@@ -102,9 +106,9 @@ $btnOutlineFontSize: 1.1em;
 $btnOutlineFontWeight: 00;
 
 // Font overrides
-$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-family-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
 
 $font-family-serif: 'Merriweather', -apple-system, BlinkMacSystemFont,
   'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,

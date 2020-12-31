@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import SEO from '../components/common/SEO/seo';
-import Header from '../components/layouts/Header/Header';
+import SEO from '../components/common/SEO/Seo';
+import HeaderPageMissing from '../components/layouts/Header/HeaderPageMissing';
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ pageContext, location }) => {
   const data = useStaticQuery(graphql`
     query NotFoundPageQ {
       masthead: file(
@@ -21,23 +21,21 @@ const NotFoundPage = () => {
   `);
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
+  let canonical = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
     <>
       <SEO
         title="Something Went Wrong! Page Cannot Be Found | Angels Towing - Junk Car Mass"
         description="Something Went Wrong! This page cannot be found"
-        canonicalLink="https://junkcarsmass.com/404/"
+        canonicalLink={canonical}
       />
-      <Header
+      <HeaderPageMissing
         Tag="header"
         className="bg-img-page-top"
         fluid={imageDataHeader}
-        textMain="Something Went Wrong!"
-        textSecondary="This page cannot be found"
         alt="404 Error - Oops! This Page Cannot Be Found"
-        btnLabel="Return Home"
-        btnLink="/"
+        textMain="Something Went Wrong!"
       />
     </>
   );

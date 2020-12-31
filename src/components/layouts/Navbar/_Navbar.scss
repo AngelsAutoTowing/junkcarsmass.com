@@ -1,390 +1,787 @@
 // Base styling for the navbar
-#mainNav {
+.navbar {
+  display: flex;
+  padding: 0;
+  margin: 0;
   box-shadow: $box-shadow;
-  background-color: $headerBg;
-  transition: background-color 0.2s ease;
-
-  li {
-    margin-bottom: 0 !important;
-  }
-
-  .nav-li-m-top {
-    margin-top: 0.7em;
-  }
-
-  .navbar-brand {
-    font-family: $font-family-sans-serif;
-    font-weight: $font-weight-bold;
-    color: $secondary;
-    &:active,
-    &:hover {
-      color: $primary;
-    }
-  }
-
-  .navbar-toggler {
-    border: $navBurgerBorder;
-    background-color: $navBurgerBgColor;
-    // padding: 0.25rem 0.75rem !important;
-    // &:focus {
-    //   padding: 0.5rem 0.75rem !important;
-    // }
-    // &:visited {
-    //   padding: 0.25rem 0.75rem !important;
-    // }
-    // &:active {
-    //   outline: 0;
-    //   padding: 0.5rem 0.75rem !important;
-    // }
-  }
-
-  .navbar-toggler span {
-    display: block;
-    background-color: $navBurgerLinesColor;
-    height: 3px;
-    width: 30px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    position: relative;
-    right: 0;
-    opacity: 1;
-  }
-
-  .navbar-toggler span:nth-child(1),
-  .navbar-toggler span:nth-child(3) {
-    -webkit-transition: transform 0.35s ease-in-out;
-    -moz-transition: transform 0.35s ease-in-out;
-    -o-transition: transform 0.35s ease-in-out;
-    transition: transform 0.35s ease-in-out;
-  }
-
-  .navbar-toggler:not(.collapsed) span:nth-child(1) {
-    position: absolute;
-    right: 28px;
-    top: 30px;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    transform: rotate(135deg);
-    opacity: 0.9;
-  }
-
-  .navbar-toggler:not(.collapsed) span:nth-child(2) {
-    height: 12px;
-    visibility: hidden;
-    background-color: $headerBg;
-  }
-
-  .navbar-toggler:not(.collapsed) span:nth-child(3) {
-    position: absolute;
-    right: 28px;
-    top: 30px;
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -o-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-    opacity: 0.9;
-  }
-
-  .navbar-nav {
-    .nav-item {
-      &.active {
-        .nav-link {
-          color: $navLinkActive !important;
-        }
-      }
-
-      .nav-link {
-        color: $navLinkColor;
-        font-family: $font-family-sans-serif;
-        font-weight: $font-weight-bold;
-        font-size: 1rem;
-        text-align: center;
-        padding: 0.75rem 0;
-        &:hover,
-        &:active {
-          color: $navLinkActive !important;
-        }
-        &::after {
-          content: ''; /* This is necessary for the pseudo element to work. */
-          display: block; /* This will put the pseudo element on its own line. */
-          margin: 0 auto; /* This will center the border. */
-          width: 50%; /* Change this to whatever width you want. */
-          padding-top: 20px; /* This creates some space between the element and the border. */
-          border-bottom: 1px solid $primary; /* This creates the border. Replace black with whatever color you want. */
-        }
-      }
-
-      .nav-button {
-        color: $navButtonColor;
-        font-family: $font-family-sans-serif;
-        font-weight: $font-weight-bold;
-        font-size: 1rem;
-        text-align: center;
-        padding: 0.75rem 0;
-        &:hover,
-        &:active {
-          color: $navButtonActive;
-        }
-        &::after {
-          content: ''; /* This is necessary for the pseudo element to work. */
-          display: block; /* This will put the pseudo element on its own line. */
-          margin: 0 auto; /* This will center the border. */
-          width: 50%; /* Change this to whatever width you want. */
-        }
-      }
-    }
-  }
-
-  .my-dropdown {
-    // opacity: 0;
-    transition: all 1s ease-in-out !important;
-  }
-
-  .my-dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: $navDropdownBg;
-    border: $navDropdownBorder;
-    z-index: 1;
-    width: 100%;
-    left: 0;
-    opacity: 0;
-    a {
-      color: $navDropdownText !important;
-      background-color: $navDropdownTextBg !important;
-      &:hover {
-        color: $navDropdownTextHover !important;
-        background-color: $navDropdownTextBgHover !important;
-      }
-      img {
-        transition: all 0.2s ease-in-out !important;
-        &:hover {
-          transform: scale(1.2) !important;
-        }
-      }
-    }
-  }
-
-  .my-dropdown:hover .my-dropdown-menu {
-    display: flex;
-    opacity: 1;
-  }
-
-  @include media-breakpoint-up(lg) {
-    // Base styling for the navbar - screen sizes greater than the large breakpoint
-    box-shadow: none;
-    background-color: $headerBg;
-    .navbar-brand {
-      color: $secondary;
-      font-size: 1.5em;
-      &:active,
-      &:hover {
-        color: $primary;
-      }
-    }
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          color: $navLinkColor;
-          padding: 0 1rem;
-          font-size: 1rem;
-          &:hover {
-            color: $navLinkHover;
-          }
-          &::after {
-            content: none; /* This is necessary for the pseudo element to work. */
-            display: block; /* This will put the pseudo element on its own line. */
-            margin: 0; /* This will center the border. */
-            width: 50%; /* Change this to whatever width you want. */
-            padding-top: 0; /* This creates some space between the element and the border. */
-            border-bottom: none; /* This creates the border. Replace black with whatever color you want. */
-          }
-        }
-        &:last-child {
-          .nav-link {
-            padding-right: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  // Navbar styling applied when the page is scrolled
-  .site-container.navbar-scrolled #mainNav {
-    box-shadow: $box-shadow;
-    background-color: $headerBg;
-    .navbar-brand {
-      color: $secondary;
-      &:active,
-      &:hover {
-        color: $primary;
-      }
-    }
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          color: $navLinkColor;
-          &:hover {
-            color: $navLinkHover;
-          }
-        }
-      }
-    }
-  }
-}
-
-.mobile-menu-contact-text {
-  font-size: 1.2rem;
-}
-
-.border-menu-item {
-  border-left: 5px solid $primary;
-  border-right: 5px solid $primary;
-}
-
-.border-menu-item-top {
-  border-left: 5px solid $primary;
-  border-right: 5px solid $primary;
-  border-top: 5px solid $primary;
-}
-
-.border-menu-item-bottom-left {
-  border-left: 5px solid $primary;
-  border-right: 2.5px solid $primary;
-  border-bottom: 5px solid $primary;
-}
-
-.border-menu-item-bottom-right {
-  border-left: 2.5px solid $primary;
-  border-right: 5px solid $primary;
-  border-bottom: 5px solid $primary;
-}
-
-.header {
-  width: 100%;
-  height: 74px;
-  background-color: white;
-  padding: 1em;
-}
-
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 9999;
+  filter: drop-shadow(5px 0px 5px black);
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 102px;
+.nav-sub {
+  width: 100%;
+  height: 40px;
+  padding: 0 2em;
+  margin: 0;
+  background-color: $secondary;
+}
+
+.nav-sub-items-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  & li {
+    padding: 0 2em;
+    margin: 0;
+    list-style: none;
+  }
+  & li:first-child {
+    padding: 0 2em 0 0 !important;
+    margin: 0;
+    list-style: none;
+  }
+  & span,
+  a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    font-size: calc(1px + 1vw);
+  }
+}
+
+.nav-sub-items-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  & li {
+    padding: 0 2em;
+    margin: 0;
+    list-style: none;
+  }
+  & li:last-child {
+    padding: 0 0 0 2em !important;
+    margin: 0;
+    list-style: none;
+  }
+  & span,
+  a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    font-size: calc(1px + 1vw);
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
+.nav-main {
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 90px;
+  padding: 0 3em;
+  margin: 0;
+  background-color: $headerBg;
+}
+
+.nav-main-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  & li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  & span,
+  a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    filter: drop-shadow(2px 2px 2px black);
+    &:hover {
+      color: $primary !important;
+    }
+  }
+  & i {
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
+.nav-main-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  width: 85%;
+  & li {
+    padding: 34px 1em;
+    margin: 0;
+    list-style: none;
+    &:hover > .nav-main-dropdown {
+      opacity: 1;
+      visibility: visible;
+      top: 130px;
+    }
+  }
+  & span,
+  a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none !important;
+    color: white;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.nav-main-links.nav-main-dropdown {
+  & span,
+  a {
+    font-weight: normal !important;
+  }
+}
+
+.nav-main-dropdown {
+  display: table;
+  position: absolute;
+  top: 145px;
+  padding: 0;
+  width: fit-content;
+  background-color: $gray;
+  border-top: 3px solid $primary;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+  & li {
+    display: list-item;
+    position: relative;
+    padding: 1.2em;
+  }
+  & a {
+    font-weight: normal;
+  }
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+}
+
+.nav-btn {
+  padding: 0.5em 1.5em !important;
+  margin: 0;
+  background-color: $primary;
+  border: 2px solid $secondary;
+  border-radius: 5px;
+  color: $secondary !important;
+  &:hover {
+    background-color: $secondary;
+    color: $primary;
+  }
 }
 
 .burger {
+  display: none;
   position: absolute;
-  top: 5%;
-  right: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
-  border: none;
+  top: 1em;
+  right: 1em;
+  padding: 10px;
+  background-color: $secondary;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 0;
-  z-index: 10;
-
-  &:focus {
-    outline: none;
-  }
-
-  div {
-    width: 2rem;
-    height: 0.25rem;
-    background: $primary;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-  }
 }
 
-.nav-menu-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  background: white;
-  width: 100vw;
-  text-align: left;
-  padding: 2rem;
-  margin-top: 57px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: transform 0.3s ease-in-out;
-  z-index: 9999;
+.burger div {
+  width: 2em;
+  height: 3px;
+  background-color: $primary;
+  margin: 5px;
+}
 
-  // @include media-breakpoint-up(lg) {
-  //   width: 100%;
-  // }
+.nav-mobile-cta-btns {
+  display: none;
+}
 
-  a {
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding: 0.5rem 0;
-    font-weight: bold;
-    color: $primary;
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    // @include media-breakpoint-up(lg) {
-    //   font-size: 1.5rem;
-    //   text-align: center;
-    // }
-
-    &:hover {
-      color: $primary;
-    }
+@media all and (max-width: 991px) {
+  .burger {
+    display: block;
   }
-}
 
-// Secondary Nav Menu for About Pages
+  .nav-main {
+    height: 85px;
+    padding: 0;
+    flex-wrap: wrap;
+  }
 
-.about-dropdown {
-  // opacity: 0;
-  transition: all 1s ease-in-out !important;
-}
+  .nav-main-items {
+    display: flex;
+    flex-direction: column;
+    background-color: $gray;
+    margin-top: 3em;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+  }
 
-.about-dropdown-menu {
-  z-index: 1;
-  left: 0;
-  opacity: 1;
-  a {
-    color: $navDropdownText !important;
-    background-color: $navDropdownTextBg !important;
-    &:hover {
-      color: $navDropdownTextHover !important;
-      background-color: $navDropdownTextBgHover !important;
-    }
-    img {
-      transition: all 0.2s ease-in-out !important;
-      &:hover {
-        transform: scale(1.2) !important;
+  .nav-main-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: none;
+    padding-top: 4em;
+    width: 100%;
+    & li {
+      width: 100%;
+      padding: 1em 0;
+      &:hover > .nav-main-dropdown {
+        top: 1em;
       }
     }
+    & a {
+      width: 100%;
+    }
   }
+
+  .nav-main-dropdown {
+    display: none;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 0;
+    top: 2em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    & a {
+      font-weight: normal;
+    }
+  }
+
+  .nav-logo {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-mobile-active {
+    transform: translateX(0%);
+  }
+
+  .nav-mobile-dropdown-active {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    top: 1em;
+    padding: 0;
+    background-color: $silver;
+    width: 100%;
+    & li {
+      width: 100vw;
+    }
+  }
+
+  .nav-mobile-cta-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em 0 0 0;
+    padding: 0.7em 0;
+    background-color: $darkGray;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+
+    & div.col {
+      padding: 1.5em;
+    }
+
+    & span {
+      display: block;
+      font-weight: normal;
+      margin-top: 10px;
+    }
+  }
+
+  .btn-border {
+    border-left: 1px solid $light;
+    border-right: 1px solid $light;
+  }
+
+  @keyframes nav-mobile-links-fade {
+    from {
+      opacity: 0;
+      transform: translate(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+
+  // .burger div {
+  //   display: block;
+  //   background-color: $navBurgerLinesColor;
+  //   height: 3px;
+  //   width: 30px;
+  //   margin-top: 6px;
+  //   margin-bottom: 6px;
+  //   -webkit-transform: rotate(0deg);
+  //   -moz-transform: rotate(0deg);
+  //   -o-transform: rotate(0deg);
+  //   transform: rotate(0deg);
+  //   position: relative;
+  //   right: 0;
+  //   opacity: 1;
+  // }
+
+  // .burger div:nth-child(1),
+  // .burger div:nth-child(3) {
+  //   -webkit-transition: transform 0.35s ease-in-out;
+  //   -moz-transition: transform 0.35s ease-in-out;
+  //   -o-transition: transform 0.35s ease-in-out;
+  //   transition: transform 0.35s ease-in-out;
+  // }
+
+  // .burger:not(.collapsed) div:nth-child(1) {
+  //   position: absolute;
+  //   right: 28px;
+  //   top: 30px;
+  //   -webkit-transform: rotate(135deg);
+  //   -moz-transform: rotate(135deg);
+  //   -o-transform: rotate(135deg);
+  //   transform: rotate(135deg);
+  //   opacity: 0.9;
+  // }
+
+  // .burger:not(.collapsed) div:nth-child(2) {
+  //   height: 12px;
+  //   visibility: hidden;
+  //   background-color: $headerBg;
+  // }
+
+  // .burger:not(.collapsed) div:nth-child(3) {
+  //   position: absolute;
+  //   right: 28px;
+  //   top: 30px;
+  //   -webkit-transform: rotate(-135deg);
+  //   -moz-transform: rotate(-135deg);
+  //   -o-transform: rotate(-135deg);
+  //   transform: rotate(-135deg);
+  //   opacity: 0.9;
+  // }
 }
+
+// #mainNavbar {
+//   box-shadow: $box-shadow;
+//   background-color: $headerBg;
+//   transition: background-color 0.2s ease;
+
+//   li {
+//     margin-bottom: 0 !important;
+//   }
+
+//   .nav-li-m-top {
+//     margin-top: 0.7em;
+//   }
+
+//   .navbar-brand {
+//     font-family: $font-family-sans-serif;
+//     font-weight: $font-weight-bold;
+//     color: $secondary;
+//     &:active,
+//     &:hover {
+//       color: $primary;
+//     }
+//   }
+
+//   .navbar-toggler {
+//     border: $navBurgerBorder;
+//     background-color: $navBurgerBgColor;
+// padding: 0.25rem 0.75rem !important;
+// &:focus {
+//   padding: 0.5rem 0.75rem !important;
+// }
+// &:visited {
+//   padding: 0.25rem 0.75rem !important;
+// }
+// &:active {
+//   outline: 0;
+//   padding: 0.5rem 0.75rem !important;
+// }
+//   }
+
+//   .navbar-toggler span {
+//     display: block;
+//     background-color: $navBurgerLinesColor;
+//     height: 3px;
+//     width: 30px;
+//     margin-top: 6px;
+//     margin-bottom: 6px;
+//     -webkit-transform: rotate(0deg);
+//     -moz-transform: rotate(0deg);
+//     -o-transform: rotate(0deg);
+//     transform: rotate(0deg);
+//     position: relative;
+//     right: 0;
+//     opacity: 1;
+//   }
+
+//   .navbar-toggler span:nth-child(1),
+//   .navbar-toggler span:nth-child(3) {
+//     -webkit-transition: transform 0.35s ease-in-out;
+//     -moz-transition: transform 0.35s ease-in-out;
+//     -o-transition: transform 0.35s ease-in-out;
+//     transition: transform 0.35s ease-in-out;
+//   }
+
+//   .navbar-toggler:not(.collapsed) span:nth-child(1) {
+//     position: absolute;
+//     right: 28px;
+//     top: 30px;
+//     -webkit-transform: rotate(135deg);
+//     -moz-transform: rotate(135deg);
+//     -o-transform: rotate(135deg);
+//     transform: rotate(135deg);
+//     opacity: 0.9;
+//   }
+
+//   .navbar-toggler:not(.collapsed) span:nth-child(2) {
+//     height: 12px;
+//     visibility: hidden;
+//     background-color: $headerBg;
+//   }
+
+//   .navbar-toggler:not(.collapsed) span:nth-child(3) {
+//     position: absolute;
+//     right: 28px;
+//     top: 30px;
+//     -webkit-transform: rotate(-135deg);
+//     -moz-transform: rotate(-135deg);
+//     -o-transform: rotate(-135deg);
+//     transform: rotate(-135deg);
+//     opacity: 0.9;
+//   }
+
+//   .navbar-nav {
+//     .nav-item {
+//       &.active {
+//         .nav-link {
+//           color: $navLinkActive !important;
+//         }
+//       }
+
+//       .nav-link {
+//         color: $navLinkColor;
+//         font-family: $font-family-sans-serif;
+//         font-weight: $font-weight-bold;
+//         font-size: 1rem;
+//         text-align: center;
+//         padding: 0.75rem 0;
+//         &:hover,
+//         &:active {
+//           color: $navLinkActive !important;
+//         }
+//         &::after {
+//           content: ''; /* This is necessary for the pseudo element to work. */
+//           display: block; /* This will put the pseudo element on its own line. */
+//           margin: 0 auto; /* This will center the border. */
+//           width: 50%; /* Change this to whatever width you want. */
+//           padding-top: 20px; /* This creates some space between the element and the border. */
+//           border-bottom: 1px solid $primary; /* This creates the border. Replace black with whatever color you want. */
+//         }
+//       }
+
+//       .nav-button {
+//         color: $navButtonColor;
+//         font-family: $font-family-sans-serif;
+//         font-weight: $font-weight-bold;
+//         font-size: 1rem;
+//         text-align: center;
+//         padding: 0.75rem 0;
+//         &:hover,
+//         &:active {
+//           color: $navButtonActive;
+//         }
+//         &::after {
+//           content: ''; /* This is necessary for the pseudo element to work. */
+//           display: block; /* This will put the pseudo element on its own line. */
+//           margin: 0 auto; /* This will center the border. */
+//           width: 50%; /* Change this to whatever width you want. */
+//         }
+//       }
+//     }
+//   }
+
+//   .my-dropdown {
+//     // opacity: 0;
+//     transition: all 1s ease-in-out !important;
+//   }
+
+//   .my-dropdown-menu {
+//     display: none;
+//     position: absolute;
+//     background-color: $navDropdownBg;
+//     border: $navDropdownBorder;
+//     z-index: 1;
+//     width: 100%;
+//     left: 0;
+//     opacity: 0;
+//     a {
+//       color: $navDropdownText !important;
+//       background-color: $navDropdownTextBg !important;
+//       &:hover {
+//         color: $navDropdownTextHover !important;
+//         background-color: $navDropdownTextBgHover !important;
+//       }
+//       img {
+//         transition: all 0.2s ease-in-out !important;
+//         &:hover {
+//           transform: scale(1.2) !important;
+//         }
+//       }
+//     }
+//   }
+
+//   .my-dropdown:hover .my-dropdown-menu {
+//     display: flex;
+//     opacity: 1;
+//   }
+
+//   @include media-breakpoint-up(lg) {
+//     // Base styling for the navbar - screen sizes greater than the large breakpoint
+//     box-shadow: none;
+//     background-color: $headerBg;
+//     .navbar-brand {
+//       color: $secondary;
+//       font-size: 1.5em;
+//       &:active,
+//       &:hover {
+//         color: $primary;
+//       }
+//     }
+//     .navbar-nav {
+//       .nav-item {
+//         .nav-link {
+//           color: $navLinkColor;
+//           padding: 0 1rem;
+//           font-size: 1rem;
+//           &:hover {
+//             color: $navLinkHover;
+//           }
+//           &::after {
+//             content: none; /* This is necessary for the pseudo element to work. */
+//             display: block; /* This will put the pseudo element on its own line. */
+//             margin: 0; /* This will center the border. */
+//             width: 50%; /* Change this to whatever width you want. */
+//             padding-top: 0; /* This creates some space between the element and the border. */
+//             border-bottom: none; /* This creates the border. Replace black with whatever color you want. */
+//           }
+//         }
+//         &:last-child {
+//           .nav-link {
+//             padding-right: 0;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @include media-breakpoint-up(lg) {
+//   // Navbar styling applied when the page is scrolled
+//   .site-container.navbar-scrolled #mainNav {
+//     box-shadow: $box-shadow;
+//     background-color: $headerBg;
+//     .navbar-brand {
+//       color: $secondary;
+//       &:active,
+//       &:hover {
+//         color: $primary;
+//       }
+//     }
+//     .navbar-nav {
+//       .nav-item {
+//         .nav-link {
+//           color: $navLinkColor;
+//           &:hover {
+//             color: $navLinkHover;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .mobile-menu-contact-text {
+//   font-size: 1.2rem;
+// }
+
+// .border-menu-item {
+//   border-left: 5px solid $primary;
+//   border-right: 5px solid $primary;
+// }
+
+// .border-menu-item-top {
+//   border-left: 5px solid $primary;
+//   border-right: 5px solid $primary;
+//   border-top: 5px solid $primary;
+// }
+
+// .border-menu-item-bottom-left {
+//   border-left: 5px solid $primary;
+//   border-right: 2.5px solid $primary;
+//   border-bottom: 5px solid $primary;
+// }
+
+// .border-menu-item-bottom-right {
+//   border-left: 2.5px solid $primary;
+//   border-right: 5px solid $primary;
+//   border-bottom: 5px solid $primary;
+// }
+
+// .header {
+//   width: 100%;
+//   height: 74px;
+//   background-color: white;
+//   padding: 1em;
+// }
+
+// /* Page content */
+// .content {
+//   padding: 16px;
+// }
+
+// /* The sticky class is added to the header with JS when it reaches its scroll position */
+// .sticky {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+// }
+
+// /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+// .sticky + .content {
+//   padding-top: 102px;
+// }
+
+// .burger {
+//   position: absolute;
+//   top: 5%;
+//   right: 2rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   width: 2rem;
+//   height: 2rem;
+//   background: transparent;
+//   border: none;
+//   cursor: pointer;
+//   padding: 0;
+//   z-index: 10;
+
+//   &:focus {
+//     outline: none;
+//   }
+
+//   div {
+//     width: 2rem;
+//     height: 0.25rem;
+//     background: $primary;
+//     border-radius: 10px;
+//     transition: all 0.3s linear;
+//     position: relative;
+//     transform-origin: 1px;
+//   }
+// }
+
+// .nav-menu-main {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: flex-start;
+//   align-content: flex-start;
+//   background: white;
+//   width: 100vw;
+//   text-align: left;
+//   padding: 2rem;
+//   margin-top: 57px;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   transition: transform 0.3s ease-in-out;
+//   z-index: 9999;
+
+//   // @include media-breakpoint-up(lg) {
+//   //   width: 100%;
+//   // }
+
+//   a {
+//     font-size: 1rem;
+//     text-transform: uppercase;
+//     padding: 0.5rem 0;
+//     font-weight: bold;
+//     color: $primary;
+//     text-decoration: none;
+//     transition: color 0.3s linear;
+
+//     // @include media-breakpoint-up(lg) {
+//     //   font-size: 1.5rem;
+//     //   text-align: center;
+//     // }
+
+//     &:hover {
+//       color: $primary;
+//     }
+//   }
+// }
+
+// // Secondary Nav Menu for About Pages
+
+// .about-dropdown {
+//   // opacity: 0;
+//   transition: all 1s ease-in-out !important;
+// }
+
+// .about-dropdown-menu {
+//   z-index: 1;
+//   left: 0;
+//   opacity: 1;
+//   a {
+//     color: $navDropdownText !important;
+//     background-color: $navDropdownTextBg !important;
+//     &:hover {
+//       color: $navDropdownTextHover !important;
+//       background-color: $navDropdownTextBgHover !important;
+//     }
+//     img {
+//       transition: all 0.2s ease-in-out !important;
+//       &:hover {
+//         transform: scale(1.2) !important;
+//       }
+//     }
+//   }
+// }
