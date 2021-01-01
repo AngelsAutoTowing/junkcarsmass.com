@@ -22,7 +22,6 @@ const PrivacyPage = ({ pageContext, location }) => {
   `);
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
-  let canonical = typeof window !== 'undefined' ? window.location.href : '';
 
   const {
     breadcrumb: { crumbs },
@@ -40,7 +39,7 @@ const PrivacyPage = ({ pageContext, location }) => {
       <SEO
         title="Privacy Policy - Your Privacy Is Critically Important To Us | Angels Towing - Junk Car Mass"
         description=""
-        canonicalLink={canonical}
+        canonicalLink="https://junkcarsmass.com/privacy/"
       />
       <Header
         Tag="header"

@@ -47,7 +47,6 @@ const JunkCarRemoval = ({ pageContext, location }) => {
   const imageDataHeader = data.headerBgImg.childImageSharp.fluid;
   const imgContentTop = data.imgContentTop.childImageSharp.fluid;
   const siteMetadata = data.companyName.siteMetadata;
-  let canonical = typeof window !== 'undefined' ? window.location.href : '';
 
   const {
     breadcrumb: { crumbs },
@@ -80,7 +79,7 @@ const JunkCarRemoval = ({ pageContext, location }) => {
       <SEO
         title="Angels Towing - Junk Car Mass"
         description="About Us"
-        canonicalLink={canonical}
+        canonicalLink="https://junkcarsmass.com/junk-car-removal/"
       />
       <Header
         Tag="header"

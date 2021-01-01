@@ -22,7 +22,6 @@ const BlogPage = ({ pageContext, location }) => {
   `);
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
-  let canonical = typeof window !== 'undefined' ? window.location.href : '';
 
   const {
     breadcrumb: { crumbs },
@@ -40,7 +39,7 @@ const BlogPage = ({ pageContext, location }) => {
       <SEO
         title="Junk Car Removal Blog - Everything About Cash For Cars | Angels Towing - Junk Car Mass"
         description="Thinking about scrapping your junk car for cash? Before you lose out on money, check out our blog posts to learn tips, tricks, and guides to selling your car"
-        canonicalLink={canonical}
+        canonicalLink="https://junkcarsmass.com/blog/"
       />
       <Header
         Tag="header"
