@@ -135,11 +135,11 @@ const Navbar = () => {
                 >
                   <li>
                     <Link
-                      to="/junk-car-removal/"
+                      to="/cash-for-junk-cars/"
                       onClick={handleMobileNavToggle}
                       className="underline"
                     >
-                      Junk Car Removal
+                      Cash For Junk Cars
                     </Link>
                   </li>
                   {/* <li>

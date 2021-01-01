@@ -11,12 +11,12 @@ import BodySidebar from '../components/layouts/BodySidebar';
 import SidebarNav from '../components/common/SidebarNav';
 import FormSidebar from '../components/common/Forms/FormSidebar';
 
-const JunkCarRemoval = ({ pageContext, location }) => {
+const CashForJunkCarsPage = ({ pageContext, location }) => {
   const data = useStaticQuery(graphql`
-    query JunkCarRemovalQ {
+    query CashForJunkCarsPageQ {
       headerBgImg: file(
         relativePath: {
-          eq: "assets/images/junk-car-removal/we-pay-cash-for-junk-cars-angels-towing-junk-car-mass.jpg"
+          eq: "assets/images/cash-for-junk-cars/we-pay-cash-for-junk-cars-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {
@@ -32,7 +32,7 @@ const JunkCarRemoval = ({ pageContext, location }) => {
       }
       imgContentTop: file(
         relativePath: {
-          eq: "assets/images/junk-car-removal/scrap-car-taking-up-space-angels-towing-junk-car-mass.jpg"
+          eq: "assets/images/cash-for-junk-cars/scrap-car-taking-up-space-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {
@@ -79,7 +79,7 @@ const JunkCarRemoval = ({ pageContext, location }) => {
       <SEO
         title="Angels Towing - Junk Car Mass"
         description="About Us"
-        canonicalLink="https://junkcarsmass.com/junk-car-removal/"
+        canonicalLink="https://junkcarsmass.com/cash-for-junk-cars/"
       />
       <Header
         Tag="header"
@@ -170,4 +170,4 @@ const JunkCarRemoval = ({ pageContext, location }) => {
   );
 };
 
-export default JunkCarRemoval;
+export default CashForJunkCarsPage;
