@@ -19,10 +19,17 @@ const HeroHome = ({ className }) => {
           }
         }
       }
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
     }
   `);
 
   const imageData = data.masthead.childImageSharp.fluid;
+  const phone = data.phoneNumber.siteMetadata;
 
   return (
     <BackgroundImage
@@ -40,8 +47,8 @@ const HeroHome = ({ className }) => {
             </h1>
             <p className="px-sm-5 p-3 mb-3 mb-lg-0 drop-shadow-darker font-weight-bold">
               Call{' '}
-              <a href="tel:+16179976510" className="text-primary">
-                (617) 997-6510
+              <a href={phone.phoneHref} className="text-primary">
+                {phone.phoneDisplay}
               </a>{' '}
               to schedule a same day pickup. We are available 24/7!
             </p>

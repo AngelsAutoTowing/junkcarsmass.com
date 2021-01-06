@@ -56,6 +56,8 @@ const BlogPostTemplate = ({ data }) => {
     }
   }`;
 
+  const phone = data.phoneNumber.siteMetadata;
+
   return (
     <>
       <SEO
@@ -165,8 +167,8 @@ const BlogPostTemplate = ({ data }) => {
 
             <p className="text-left text-dark">
               If you are interested in speaking with Angel, please call{' '}
-              <a className="text-link-on-white" href="tel:+17819363974">
-                (781) 936-3974
+              <a className="text-link-on-white" href={phone.phoneHref}>
+                {phone.phoneDisplay}
               </a>
               .
             </p>
@@ -202,6 +204,12 @@ export const postQuery = graphql`
             }
           }
         }
+      }
+    }
+    phoneNumber: site {
+      siteMetadata {
+        phoneDisplay
+        phoneHref
       }
     }
   }

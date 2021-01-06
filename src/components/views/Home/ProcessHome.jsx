@@ -17,10 +17,17 @@ const ProcessHome = () => {
           }
         }
       }
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
     }
   `);
 
   const imageData = data.masthead.childImageSharp.fluid;
+  const phone = data.phoneNumber.siteMetadata;
 
   return (
     <BackgroundImage
@@ -51,10 +58,10 @@ const ProcessHome = () => {
               <p className="text-dark">
                 Call us today at{' '}
                 <a
-                  href="tel:+16179976510"
+                  href={phone.phoneHref}
                   className="text-secondary font-weight-bold"
                 >
-                  (617) 997-6510
+                  {phone.phoneDisplay}
                 </a>{' '}
                 to discuss your vehicle and reach an agreement. If you’d prefer,
                 complete our contact form below.

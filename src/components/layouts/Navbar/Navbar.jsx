@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import SubNavbar from './SubNavbar';
 import ImgAngelsLogo from '../../images/Logos/img-angels-logo';
@@ -50,6 +50,19 @@ const Navbar = () => {
   const handleMobileDropdownHowToggle = () => {
     setIsMobileDropdownHowActive(!isMobileDropdownHowActive);
   };
+
+  const data = useStaticQuery(graphql`
+    query NavbarQ {
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
+    }
+  `);
+
+  const phone = data.phoneNumber.siteMetadata;
 
   return (
     <nav id="navbar" className="navbar">
@@ -219,28 +232,41 @@ const Navbar = () => {
             </ul>
             <li>
               <div>
-                <a href="tel:+16179976510" className="nav-btn">
+                <a href={phone.phoneHref} className="nav-btn">
                   Call Us
                 </a>
               </div>
             </li>
             <Row className="nav-mobile-cta-btns">
               <Col>
-                <i className="fas fa-2x fa-map-marker-alt text-primary"></i>
-                <span>Directions</span>
+                <a href="https://www.google.com/maps/place/Angels+Towing+-+Junk+Car+Mass/@41.9886533,-70.8098637,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbef6c18dd52e15fd!8m2!3d41.9886533!4d-70.807675">
+                  <div>
+                    <i className="fas fa-2x fa-map-marker-alt text-primary"></i>
+                    <span>Directions</span>
+                  </div>
+                </a>
               </Col>
               <Col className="btn-border">
-                <i className="fas fa-2x fa-envelope text-primary"></i>
-                <span>Contact</span>
+                <Link to="/">
+                  <div>
+                    <i className="fas fa-2x fa-envelope text-primary"></i>
+                    <span>Contact</span>
+                  </div>
+                </Link>
               </Col>
               <Col>
-                <i className="fas fa-2x fa-phone text-primary"></i>
-                <span>Call Us</span>
+                <a href={phone.phoneHref}>
+                  <i className="fas fa-2x fa-phone text-primary"></i>
+                  <span>Call Us</span>
+                </a>
               </Col>
             </Row>
           </ul>
         </Row>
-        <div onClick={handleMobileNavToggle} className="burger">
+        <div
+          onClick={handleMobileNavToggle}
+          className={isMobileNavActive ? 'burger burger-active' : 'burger'}
+        >
           <div className="line-1"></div>
           <div className="line-2"></div>
           <div className="line-3"></div>

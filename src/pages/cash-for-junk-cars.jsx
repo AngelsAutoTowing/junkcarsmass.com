@@ -30,6 +30,12 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
           title
         }
       }
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
       imgContentTop: file(
         relativePath: {
           eq: "assets/images/cash-for-junk-cars/scrap-car-taking-up-space-angels-towing-junk-car-mass.jpg"
@@ -47,6 +53,7 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
   const imageDataHeader = data.headerBgImg.childImageSharp.fluid;
   const imgContentTop = data.imgContentTop.childImageSharp.fluid;
   const siteMetadata = data.companyName.siteMetadata;
+  const phone = data.phoneNumber.siteMetadata;
 
   const {
     breadcrumb: { crumbs },
@@ -65,7 +72,7 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
       url: '/about/',
     },
     {
-      name: 'Check Our Service Areas',
+      name: 'See Our Service Areas',
       url: '/service-areas/',
     },
     {
@@ -143,9 +150,9 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
                 your house and haul away that junk car. Give us a call at{' '}
                 <a
                   className="font-weight-bold text-secondary"
-                  href="tel:+16179976510"
+                  href={phone.phoneHref}
                 >
-                  (617) 977-6510
+                  {phone.phoneDisplay}
                 </a>{' '}
                 or fill out our form.
               </p>

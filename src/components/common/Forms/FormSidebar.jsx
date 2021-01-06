@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, Col, Container } from 'react-bootstrap';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const FormSidebar = () => {
   const [contact, setContact] = useState({
@@ -28,6 +29,19 @@ const FormSidebar = () => {
   const handleChange = (e) =>
     setContact({ ...contact, [e.target.name]: e.target.value });
 
+  const data = useStaticQuery(graphql`
+    query FormSidebarQ {
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
+    }
+  `);
+
+  const phoneNumber = data.phoneNumber.siteMetadata;
+
   return (
     <Form
       name="form-sidebar"
@@ -48,8 +62,8 @@ const FormSidebar = () => {
         </p>
         <p className="text-light">
           Give us a call at{' '}
-          <a className="font-weight-bold" href="tel:+16179976510">
-            (617) 977-6510
+          <a className="font-weight-bold" href={phoneNumber.phoneHref}>
+            {phoneNumber.phoneDisplay}
           </a>{' '}
           or fill out the form below.
         </p>
