@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Table } from 'react-bootstrap';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import ImgTowTruck from '../../images/Pages/Home/img-tow-truck';
 import ButtonExternalLink from '../../common/Buttons/ButtonExternalLink/ButtonExternalLink';
@@ -9,6 +10,18 @@ import IconExperience from '../../../assets/svg/experience-professional-angels-a
 import IconSatisfaction from '../../../assets/svg/custom-satisfaction-angels-auto-towing-plymouth-county-ma.svg';
 
 const CompanyHome = () => {
+  const data = useStaticQuery(graphql`
+    query CompanyHomeQ {
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
+    }
+  `);
+
+  const phone = data.phoneNumber.siteMetadata;
   return (
     <section className="bg-light">
       <Container className="bg-light py-5">
@@ -76,7 +89,7 @@ const CompanyHome = () => {
             <Container className="mt-5 mx-0 px-0 text-center text-lg-left">
               <ButtonExternalLink
                 btnLabel="Call Us Today"
-                btnLink="tel:+16179976510"
+                btnLink={phone.phoneHref}
               />
             </Container>
           </Col>

@@ -13,8 +13,16 @@ const Footer = () => {
           author
         }
       }
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
     }
   `);
+
+  const phone = data.phoneNumber.siteMetadata;
 
   return (
     <footer>
@@ -49,12 +57,12 @@ const Footer = () => {
                 </a>
               </Container>
               <Container className="px-0 text-sans-serif pt-2 d-flex mb-2">
-                <a href="tel:+16179976510">
+                <a href={phone.phoneHref}>
                   <i className="fas fa-phone mt-1" />
                 </a>
 
-                <a className="ml-3" href="tel:+16179976510">
-                  Cell: (617) 997-6510
+                <a className="ml-3" href={phone.phoneHref}>
+                  {phone.phoneDisplay}
                 </a>
               </Container>
               <Container className="px-0 text-sans-serif pt-2 d-flex mb-2">

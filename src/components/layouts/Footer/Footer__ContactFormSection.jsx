@@ -29,11 +29,11 @@ const Footer__ContactFormSection = ({ className }) => {
       className={className}
       fluid={imageData}
       backgroundColor={`#040e18`}
-      alt="A MDH Construction job site in Plymouth, MA building a new home."
+      alt="Junk car removal"
     >
       <Container>
         <Row className="justify-content-center">
-          <Col xs={12} md={8} lg={6} className="px-0 my-5">
+          <Col xs={12} md={8} lg={6} className="px-3 px-lg-0 my-5">
             <FormFooter />
           </Col>
         </Row>

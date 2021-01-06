@@ -30,6 +30,12 @@ const ServiceAreasPage = ({ pageContext, location }) => {
           title
         }
       }
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
       imgContentTop: file(
         relativePath: {
           eq: "assets/images/service-areas/massachusetts-boston-city-angels-towing-junk-car-mass.jpg"
@@ -47,6 +53,7 @@ const ServiceAreasPage = ({ pageContext, location }) => {
   const imageDataHeader = data.headerBgImg.childImageSharp.fluid;
   const imgContentTop = data.imgContentTop.childImageSharp.fluid;
   const siteMetadata = data.companyName.siteMetadata;
+  const phone = data.phoneNumber.siteMetadata;
 
   const {
     breadcrumb: { crumbs },
@@ -124,9 +131,9 @@ const ServiceAreasPage = ({ pageContext, location }) => {
                 any questions about your location, please just give us a call at{' '}
                 <a
                   className="font-weight-bold text-link-on-white"
-                  href="tel:+16179976510"
+                  href={phone.phoneHref}
                 >
-                  (617) 977-6510
+                  {phone.phoneDisplay}
                 </a>
                 .
               </p>

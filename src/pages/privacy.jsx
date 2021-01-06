@@ -18,10 +18,17 @@ const PrivacyPage = ({ pageContext, location }) => {
           }
         }
       }
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
     }
   `);
 
   const imageDataHeader = data.masthead.childImageSharp.fluid;
+  const phone = data.phoneNumber.siteMetadata;
 
   const {
     breadcrumb: { crumbs },
@@ -222,9 +229,9 @@ const PrivacyPage = ({ pageContext, location }) => {
               us at{' '}
               <a
                 className="font-weight-bold text-link-on-white"
-                href="tel:+16179976510"
+                href={phone.phoneHref}
               >
-                (617) 977-6510
+                {phone.phoneDisplay}
               </a>
               .
             </p>

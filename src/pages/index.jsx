@@ -11,7 +11,7 @@ const IndexPage = () => {
     <>
       <SEO
         title="Highest Cash For Junk Cars - Same Day Pick Up 24/7 | Angels Towing - Junk Car Mass"
-        description="Angels Towing - Junk Car Mass will pay the highest amount of CASH for your junk car. We buy any vehicle make, model, and condition. Call (617) 997-6510 for your quote!"
+        description="Angels Towing - Junk Car Mass will pay the highest amount of CASH for your junk car. We buy any vehicle make, model, and condition. Call (781) 243-1927 for your quote!"
         canonicalLink="https://junkcarsmass.com/"
       />
       <HeroHome className="bg-img-hero-home" />

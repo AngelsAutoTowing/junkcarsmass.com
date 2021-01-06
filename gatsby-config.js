@@ -15,6 +15,8 @@ module.exports = {
     author: `Flaviano Angel`,
     image: `https://junkcarsmass.com/static/49c35b065dcdb5415dab96d7c754f4f3/2dc9a/angels-towing-junk-car-mass-cash-for-junk-cars-logo.png`,
     siteUrl,
+    phoneDisplay: `781-243-1927`,
+    phoneHref: `tel:+17812431927`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
