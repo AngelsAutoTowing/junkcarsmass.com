@@ -72,6 +72,10 @@ const ServiceAreasPage = ({ pageContext, location }) => {
       url: '/about/',
     },
     {
+      name: 'See Our Service Areas',
+      url: '/service-areas/',
+    },
+    {
       name: 'Read Our Reviews',
       url: '/reviews/',
     },
@@ -80,16 +84,16 @@ const ServiceAreasPage = ({ pageContext, location }) => {
   return (
     <>
       <SEO
-        title="Angels Towing - Junk Car Mass"
-        description="About Us"
+        title={`Junk Car Removal Service Areas - Boston, MA - Providence, RI | ${siteMetadata.title}`}
+        description={`Check our junk car removal service areas to verify your location. We will pay cash for your junk car and tow it for free. Call ${phone.phoneDisplay} for free quote`}
         canonicalLink="https://junkcarsmass.com/service-areas/"
       />
       <Header
         Tag="header"
         className="bg-img-page-top"
         fluid={imageDataHeader}
-        alt={`${siteMetadata.title}'s salvage yard crane picking up scrap metal and junk cars in Massachusetts`}
-        textMain="Massachusetts & Rhode Island Service Areas"
+        alt={`${siteMetadata.title}'s service area map of Massachusetts and Rhode Island for junk car removal and cash for junk car services`}
+        textMain="MA & RI Junk Car Removal Service Areas"
         crumbs={crumbs}
         customCrumbLabel={customCrumbLabel}
       />
@@ -104,7 +108,12 @@ const ServiceAreasPage = ({ pageContext, location }) => {
                 From Cape Cod to Boston, South Shore to Worcester, South Coast
                 to Providence
               </span>
-              <Img fluid={imgContentTop} className="my-5" />
+              <Img
+                fluid={imgContentTop}
+                title="Boston, MA junk car removal service area"
+                alt="Boston, MA city skyline, we pickup junk cars in and around Boston, Massachusetts from the north shore to the south shore."
+                className="my-5"
+              />
               <h3>Our Location</h3>
               <p className="no-drop-shadow mb-5">
                 Our junkyard is centrally located at{' '}
