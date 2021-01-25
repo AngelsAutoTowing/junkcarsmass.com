@@ -58,6 +58,16 @@ module.exports = {
         usePathPrefix: '/',
         trailingSlashes: true,
         exclude: [`/404/`, `/404.html`],
+        crumbLabelUpdates: [
+          {
+            pathname: '/massachusetts',
+            crumbLabel: 'Massachusetts',
+          },
+          {
+            pathname: '/massachusetts/boston',
+            crumbLabel: 'Boston',
+          },
+        ],
       },
     },
     {

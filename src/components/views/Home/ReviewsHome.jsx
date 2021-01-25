@@ -8,7 +8,7 @@ const ReviewsHome = () => {
     <section className="section-no-margin bg-light-gray page-section">
       <Container className="py-5">
         <h2 className="display-4 font-weight-bold text-secondary mb-5 pb-5">
-          #1 Junk Car Removal In Massachusetts
+          #1 Junk Car Removal Service
         </h2>
         <Carousel
           interval={null}
