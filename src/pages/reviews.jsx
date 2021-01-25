@@ -32,6 +32,12 @@ const ReviewsPage = ({ pageContext, location }) => {
           title
         }
       }
+      phoneNumber: site {
+        siteMetadata {
+          phoneDisplay
+          phoneHref
+        }
+      }
       imgContentTop: file(
         relativePath: {
           eq: "assets/images/reviews/junkyard-cars-stacked-angels-towing-junk-car-mass.jpg"
@@ -49,6 +55,7 @@ const ReviewsPage = ({ pageContext, location }) => {
   const imageDataHeader = data.headerBgImg.childImageSharp.fluid;
   const imgContentTop = data.imgContentTop.childImageSharp.fluid;
   const siteMetadata = data.companyName.siteMetadata;
+  const phone = data.phoneNumber.siteMetadata;
 
   const {
     breadcrumb: { crumbs },
@@ -70,13 +77,17 @@ const ReviewsPage = ({ pageContext, location }) => {
       name: 'See Our Service Areas',
       url: '/service-areas/',
     },
+    {
+      name: 'Read Our Reviews',
+      url: '/reviews/',
+    },
   ];
 
   return (
     <>
       <SEO
-        title="Angels Towing - Junk Car Mass"
-        description="About Us"
+        title="See Our 5-Star Reviews for Junk Car Removal in MA & RI | Angels Towing - Junk Car Mass"
+        description={`We pay the most cash for junk cars, offer free towing & same day pickup, so our customers are happy! Read our reviews, then call ${phone.phoneDisplay} for a quote`}
         canonicalLink="https://junkcarsmass.com/reviews/"
       />
       <Header
@@ -84,7 +95,7 @@ const ReviewsPage = ({ pageContext, location }) => {
         className="bg-img-page-top"
         fluid={imageDataHeader}
         alt={`${siteMetadata.title}'s salvage yard crane picking up scrap metal and junk cars in Massachusetts`}
-        textMain="5-Star Reviews from Our Happy Customers"
+        textMain="Read Our 5-Star Reviews For Junk Car Removal"
         crumbs={crumbs}
         customCrumbLabel={customCrumbLabel}
       />
@@ -98,12 +109,17 @@ const ReviewsPage = ({ pageContext, location }) => {
               <span className="display-6 font-italic">
                 See How We Stack Up Against The Competition
               </span>
-              <Img fluid={imgContentTop} className="my-5" />
+              <Img
+                fluid={imgContentTop}
+                title="Our junkyard accepts junk vehicles of any make, model, and condition"
+                alt="Scrap yard filled with automobiles we towed from Boston, MA and Providence, RI"
+                className="my-5"
+              />
               <h3>Customer Satisfaction</h3>
               <p>
                 Customer reviews are very important to us and we always
                 appreciate the feedback. We ask all customers to leave an honest
-                review so we can guage how we are doing.
+                review so we can gauge how we are doing.
               </p>
               <p className="mb-5">
                 It's great to know where we excel and what we need to improve

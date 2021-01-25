@@ -132,8 +132,8 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
   return (
     <>
       <SEO
-        title="Angels Towing - Junk Car Mass"
-        description="About Us"
+        title={`Cash For Junk Cars - Junk Car Removal - Same Day Pickup | ${siteMetadata.title}`}
+        description={`We pay the most cash for junk cars & offer same day pickup. We guarantee free towing & no hidden fees. Call us at ${phone.phoneDisplay} for your junk car removal`}
         canonicalLink="https://junkcarsmass.com/cash-for-junk-cars/"
       />
       <Header
@@ -171,7 +171,12 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
                 simply just having some extra cash in your pocket.​
               </p>
               <p>What's better than getting paid money for junk?</p>
-              <Img fluid={imgContentTop} className="my-5" />
+              <Img
+                fluid={imgContentTop}
+                title="Junk car ready for same day pick up"
+                alt="Junk car in bad condition, ready for junk car removal"
+                className="my-5"
+              />
               <h2 className="pt-4 my-5">
                 Sell Your Junk Car Today Before Repairs Cost You More
               </h2>
@@ -195,7 +200,12 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
                 <li>Brake Line – $1,000​​​</li>
                 <li>and the list goes on...</li>
               </ul>
-              <Img fluid={imgRepairBills} className="my-5" />
+              <Img
+                fluid={imgRepairBills}
+                title="Don't wait for expensive repair bills, get cash instead"
+                alt="Couple stressed out over vehicle repair bills, considering junk car removal"
+                className="my-5"
+              />
               <p>
                 So what happens if you drive your car until the wheels fall off?
                 Well, it will certainly{' '}
@@ -222,7 +232,12 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
                 <li>Totaled - no longer running​</li>
                 <li>Unwanted - just sitting around</li>
               </ul>
-              <Img fluid={imgWreckedCar} className="my-5" />
+              <Img
+                fluid={imgWreckedCar}
+                title="We accept vehicles of any make, model, and condition"
+                alt="Scrap vehicle in bad condition, we accept anything and pay cash"
+                className="my-5"
+              />
               <p>
                 Not only do we have great cash pay-outs for junk cars, but we
                 also offer:​
@@ -245,7 +260,12 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
                 </a>
                 .
               </p>
-              <Img fluid={imgCashQuote} className="my-5" />
+              <Img
+                fluid={imgCashQuote}
+                title={`Call ${phone.phoneDisplay} for junk car removal quote`}
+                alt="One phone call can result in extra cash in your pocket"
+                className="my-5"
+              />
               <h2 className="pt-4 my-5">
                 See What Our Customers Have To Say About Angels Towing - Junk
                 Car Mass
@@ -297,7 +317,12 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
                 trucks will be out front ready to{' '}
                 <strong>trade your junk car for cash</strong>.
               </p>
-              <Img fluid={imgTowTruck} className="my-5" />
+              <Img
+                fluid={imgTowTruck}
+                title="Free towing and no hidden fees"
+                alt="Our tow truck picking up a junk car for removal"
+                className="my-5"
+              />
               <h2 className="pt-4 my-5">
                 Give Us A Call Today For Your Free Quote
               </h2>

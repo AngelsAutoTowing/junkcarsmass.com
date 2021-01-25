@@ -61,6 +61,10 @@ const AboutPage = ({ pageContext, location }) => {
 
   const navList = [
     {
+      name: 'Learn More About Us',
+      url: '/about/',
+    },
+    {
       name: 'See Our Service Areas',
       url: '/service-areas/',
     },
@@ -82,7 +86,7 @@ const AboutPage = ({ pageContext, location }) => {
         className="bg-img-page-top"
         fluid={imageDataHeader}
         alt={`${siteMetadata.title}'s salvage yard crane picking up scrap metal and junk cars in Massachusetts`}
-        textMain={`About ${siteMetadata.title}`}
+        textMain="We are a professional junk car removal company"
         crumbs={crumbs}
         customCrumbLabel={customCrumbLabel}
       />
@@ -95,7 +99,12 @@ const AboutPage = ({ pageContext, location }) => {
                 Proudly Serving Massachusetts & Rhose Island residents with
                 affordable junkyard & towing services
               </span>
-              <Img fluid={imgContentTop} className="my-5" />
+              <Img
+                fluid={imgContentTop}
+                title="Our junk car removal tow trucks"
+                alt="Our junk car removal tow trucks travel around Massachusetts and Rhode Island offering free towing for scrap vehicle pickup"
+                className="my-5"
+              />
               <h3>Background</h3>
               <p>
                 {siteMetadata.title} began as a small junkyard in Plympton,
