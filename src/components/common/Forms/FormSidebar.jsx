@@ -62,7 +62,10 @@ const FormSidebar = () => {
         </p>
         <p className="text-light">
           Give us a call at{' '}
-          <a className="font-weight-bold" href={phoneNumber.phoneHref}>
+          <a
+            className="font-weight-bold text-primary"
+            href={phoneNumber.phoneHref}
+          >
             {phoneNumber.phoneDisplay}
           </a>{' '}
           or fill out the form below.

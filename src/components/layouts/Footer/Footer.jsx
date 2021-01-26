@@ -108,11 +108,19 @@ const Footer = () => {
               className="text-left text-md-left mb-5 mb-lg-0 drop-shadow-dark"
             >
               <p className="text-uppercase mb-4 text-primary lead font-weight-bold">
-                Company Info
+                Calling Info
               </p>
               <Container className="px-0 text-sans-serif pt-2 d-flex mb-2">
-                <i className="fas fa-clock mt-2" />
-                <Table className="ml-2" borderless size="sm">
+                <i className="fas fa-clock mt-1" />
+                <Col>
+                  <p className="">We are available for calls 24/7.</p>
+                  <p className="">
+                    During late night/early morning hours please leave a
+                    message.
+                  </p>
+                  <p className="">We will get right back to you.</p>
+                </Col>
+                {/* <Table className="ml-2" borderless size="sm">
                   <tbody>
                     <tr>
                       <td>Monday</td>
@@ -143,7 +151,7 @@ const Footer = () => {
                       <td>Closed</td>
                     </tr>
                   </tbody>
-                </Table>
+                </Table> */}
               </Container>
             </Col>
 
