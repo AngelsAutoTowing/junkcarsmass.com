@@ -11,12 +11,12 @@ import BodySidebar from '../components/layouts/BodySidebar';
 import SidebarNav from '../components/common/SidebarNav';
 import FormSidebar from '../components/common/Forms/FormSidebar';
 
-const ServiceAreasPage = ({ pageContext, location }) => {
+const MassachusettsPage = ({ pageContext, location }) => {
   const data = useStaticQuery(graphql`
-    query ServiceAreasPageQ {
+    query MassachusettsPageQ {
       headerBgImg: file(
         relativePath: {
-          eq: "assets/images/service-areas/massachusetts-map-service-areas-angels-towing-junk-car-mass.jpg"
+          eq: "assets/images/massachusetts/map-massachusetts-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {
@@ -38,7 +38,7 @@ const ServiceAreasPage = ({ pageContext, location }) => {
       }
       imgContentTop: file(
         relativePath: {
-          eq: "assets/images/service-areas/massachusetts-boston-city-angels-towing-junk-car-mass.jpg"
+          eq: "assets/images/massachusetts/lighthouse-massachusetts-angels-towing-junk-car-mass.jpg"
         }
       ) {
         childImageSharp {
@@ -84,16 +84,16 @@ const ServiceAreasPage = ({ pageContext, location }) => {
   return (
     <>
       <SEO
-        title={`Junk Car Removal Service Areas - Boston, MA - Providence, RI | ${siteMetadata.title}`}
-        description={`Check our junk car removal service areas to verify your location. We will pay cash for your junk car and tow it for free. Call ${phone.phoneDisplay} for free quote`}
-        canonicalLink="https://junkcarsmass.com/service-areas/"
+        title={`Massachusetts Junk Car Removal Service Areas | ${siteMetadata.title}`}
+        description={`Check our junk car removal service areas in MA to verify your location. We will pay cash for your junk car and tow it for free. Call ${phone.phoneDisplay} for free quote`}
+        canonicalLink="https://junkcarsmass.com/massachusetts/"
       />
       <Header
         Tag="header"
         className="bg-img-page-top"
         fluid={imageDataHeader}
-        alt={`${siteMetadata.title}'s service area map of Massachusetts and Rhode Island for junk car removal and cash for junk car services`}
-        textMain="MA & RI Junk Car Removal Service Areas"
+        alt={`${siteMetadata.title}'s service area map of Massachusetts counties for junk car removal and cash for junk car services`}
+        textMain="Massachusetts Junk Car Removal Service Areas"
         crumbs={crumbs}
         customCrumbLabel={customCrumbLabel}
       />
@@ -102,11 +102,11 @@ const ServiceAreasPage = ({ pageContext, location }) => {
           <BodyContent>
             <Container>
               <h2 className="mb-3">
-                We Service Eastern & Central Massachusetts and Rhode Island
+                Our Junkyard Pays Cash for Cars in Massachusetts
               </h2>
               <span className="display-6 font-italic">
                 From Cape Cod to Boston, South Shore to Worcester, South Coast
-                to Providence
+                to North Shore
               </span>
               <Img
                 fluid={imgContentTop}
@@ -641,69 +641,6 @@ const ServiceAreasPage = ({ pageContext, location }) => {
                   </Card>
                 </Accordion>
               </Container>
-              <h3>Rhode Island</h3>
-              <p className="mb-5">
-                Our tow trucks only travel to the metro Providence area. We
-                prefer not to go any further than the city limits. If you have
-                any questions about your location, please just give us a call at{' '}
-                <a
-                  className="font-weight-bold text-secondary"
-                  href={phone.phoneHref}
-                >
-                  {phone.phoneDisplay}
-                </a>
-                .
-              </p>
-              <Container className="mt-4 my-lg-5 p-3 justify-content-center align-items-center rounded">
-                <Accordion className="drop-shadow">
-                  <Card className="accordion-animation">
-                    <Accordion.Toggle
-                      className="d-flex align-content-center bg-dark"
-                      as={Card.Header}
-                      eventKey="1"
-                    >
-                      <span className="mr-3 mt-1">
-                        <i className="fas fa-plus-circle text-primary accordionIcon"></i>
-                      </span>
-                      <h3 className="accordionText mb-2 text-left font-weight-normal d-inline-block">
-                        Providence County
-                      </h3>
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="1">
-                      <Card.Body className="px-0 px-lg-3">
-                        <Row>
-                          <Col xs={12} lg={4}>
-                            <ul className="mb-2 mb-lg-3">
-                              <li>Central Falls</li>
-                              <li>Chepachet</li>
-                              <li>Clayville</li>
-                              <li>Cranston</li>
-                              <li>Cumberland Hill</li>
-                              <li>East Providence</li>
-                              <li>Foster Center</li>
-                              <li>Greenville</li>
-                              <li>Harmony</li>
-                              <li>Harrisville</li>
-                            </ul>
-                          </Col>
-                          <Col xs={12} lg={4}>
-                            <ul className="mb-2 mb-lg-3">
-                              <li>Pascoag</li>
-                              <li>Pawtucket</li>
-                              <li>Providence</li>
-                              <li>Valley Falls</li>
-                              <li>Woonsocket</li>
-                            </ul>
-                          </Col>
-                          <Col xs={12} lg={4}>
-                            <ul className="mb-2 mb-lg-3"></ul>
-                          </Col>
-                        </Row>
-                      </Card.Body>
-                    </Accordion.Collapse>
-                  </Card>
-                </Accordion>
-              </Container>
             </Container>
           </BodyContent>
         }
@@ -725,4 +662,4 @@ const ServiceAreasPage = ({ pageContext, location }) => {
   );
 };
 
-export default ServiceAreasPage;
+export default MassachusettsPage;
