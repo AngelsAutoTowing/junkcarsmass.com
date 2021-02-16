@@ -196,7 +196,7 @@ const UsedAutoPartsPage = ({ pageContext, location }) => {
               </p>
               <Row>
                 <Col xs={12} lg={6}>
-                  <ul className="mb-5">
+                  <ul className="mb-2 mb-lg-5">
                     <li>Engines</li>
                     <li>Cylinders</li>
                     <li>Transmissions</li>
@@ -292,10 +292,10 @@ const UsedAutoPartsPage = ({ pageContext, location }) => {
           <BodySidebar>
             <Container>
               <h2 className="text-center">What We Do</h2>
-              <Container className="my-3">
+              <Container className="my-3 px-0 px-lg-3">
                 <SidebarNav navList={navList} />
               </Container>
-              <Container className="my-3">
+              <Container className="my-3 px-0 px-lg-3">
                 <FormSidebar />
               </Container>
             </Container>

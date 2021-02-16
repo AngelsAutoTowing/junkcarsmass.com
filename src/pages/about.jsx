@@ -139,10 +139,10 @@ const AboutPage = ({ pageContext, location }) => {
           <BodySidebar>
             <Container>
               <h2 className="text-center">Who We Are</h2>
-              <Container className="my-3">
+              <Container className="my-3 px-0 px-lg-3">
                 <SidebarNav navList={navList} />
               </Container>
-              <Container className="my-3">
+              <Container className="my-3 px-0 px-lg-3">
                 <FormSidebar />
               </Container>
             </Container>
