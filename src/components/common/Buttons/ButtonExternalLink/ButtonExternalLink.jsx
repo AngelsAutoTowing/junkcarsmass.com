@@ -6,7 +6,7 @@ const ButtonExternalLink = ({ btnLink, btnLabel, btnSolid }) => {
   const outline = 'btn btn-outline-light btn-xl-outline drop-shadow-dark';
 
   return (
-    <a href={btnLink} className={btnSolid ? solid : outline}>
+    <a href={btnLink} target="_blank" className={btnSolid ? solid : outline}>
       <span>{btnLabel}</span>
     </a>
   );

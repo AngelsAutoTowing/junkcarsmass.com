@@ -155,33 +155,15 @@ const Navbar = () => {
                       Cash For Junk Cars
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link
-                      to="/scrap-metal/"
-                      onClick={handleMobileNavToggle}
-                      className="underline"
-                    >
-                      Scrap Metal
-                    </Link>
-                  </li>
                   <li>
                     <Link
-                      to="/towing/"
+                      to="/used-auto-parts/"
                       onClick={handleMobileNavToggle}
                       className="underline"
                     >
-                      Towing
+                      Used Auto Parts
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      to="/auto-parts/"
-                      onClick={handleMobileNavToggle}
-                      className="underline"
-                    >
-                      Auto Parts
-                    </Link>
-                  </li> */}
                 </ul>
               </li>
               {/* <li>

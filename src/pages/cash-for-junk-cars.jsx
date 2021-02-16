@@ -116,16 +116,12 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
 
   const navList = [
     {
-      name: 'Learn More About Us',
-      url: '/about/',
+      name: 'Cash For Junk Cars',
+      url: '/cash-for-junk-cars/',
     },
     {
-      name: 'See Our Service Areas',
-      url: '/service-areas/',
-    },
-    {
-      name: 'Read Our Reviews',
-      url: '/reviews/',
+      name: 'Used Auto Parts',
+      url: '/used-auto-parts/',
     },
   ];
 
@@ -354,10 +350,10 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
           <BodySidebar>
             <Container>
               <h2 className="text-center">Who We Are</h2>
-              <Container className="my-3">
+              <Container className="my-3 px-0 px-lg-3">
                 <SidebarNav navList={navList} />
               </Container>
-              <Container className="my-3">
+              <Container className="my-3 px-0 px-lg-3">
                 <FormSidebar />
               </Container>
             </Container>
