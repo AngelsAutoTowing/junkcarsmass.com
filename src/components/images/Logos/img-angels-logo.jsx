@@ -23,7 +23,8 @@ const ImgAngelsLogo = ({ className }) => {
   return (
     <Img
       fixed={data.image.childImageSharp.fixed}
-      alt="Angels Auto & Towing company logo"
+      alt="Angels Towing - Junk Car Mass company logo"
+      title="Angels Towing - Junk Car Mass"
       className={className}
     />
   );

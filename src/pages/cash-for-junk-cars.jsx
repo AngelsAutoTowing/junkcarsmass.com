@@ -116,16 +116,12 @@ const CashForJunkCarsPage = ({ pageContext, location }) => {
 
   const navList = [
     {
-      name: 'Learn More About Us',
-      url: '/about/',
+      name: 'Cash For Junk Cars',
+      url: '/cash-for-junk-cars/',
     },
     {
-      name: 'See Our Service Areas',
-      url: '/service-areas/',
-    },
-    {
-      name: 'Read Our Reviews',
-      url: '/reviews/',
+      name: 'Used Auto Parts',
+      url: '/used-auto-parts/',
     },
   ];
 
